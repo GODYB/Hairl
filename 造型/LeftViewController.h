@@ -13,8 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *Head;
 @property (weak, nonatomic) IBOutlet UILabel *lable1;
-
 @property (weak, nonatomic) IBOutlet UILabel *lable2;
-
-
+@property (strong, nonatomic) UIImagePickerController *imagePickerController;
 @end

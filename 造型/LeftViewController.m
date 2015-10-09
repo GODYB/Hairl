@@ -17,6 +17,7 @@
     
 }
 - (IBAction)tuichu:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)chuping:(UITapGestureRecognizer *)sender;
 
 
 
@@ -73,20 +74,18 @@
          _Head.image = Nil;
         _lable2.text= Nil;
         _lable1 = Nil;
-        [self pange];
     }
 }
--(void)pange
+- (IBAction)tuichu:(UIButton *)sender forEvent:(UIEvent *)event
 {
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
-    tapGesture.numberOfTapsRequired = 1; //点击次数
-    tapGesture.numberOfTouchesRequired = 1; //点击手指数
-    [self.view addGestureRecognizer:tapGesture];
-    
+    NSLog(@"sad");
+    [PFUser logOut];
+    [self read];
 }
-//轻击手势触发方法
--(void)tapGesture:(UITapGestureRecognizer *)sender
+
+- (IBAction)chuping:(UITapGestureRecognizer *)sender
 {
+    
     NSLog(@"sadasdasd");
     PFUser *user = [PFUser currentUser];
     if (!user) {
@@ -99,16 +98,11 @@
             //导航条隐藏掉
             nc.navigationBarHidden = NO;
             //类似那个箭头 跳转到第二个界面
+            //[self presentViewController:nc animated:YES completion:nil];
             [self presentViewController:nc animated:YES completion:nil];
-            //_hh.enabled = YES;
-            //_buttonItem.enabled=YES;
+            _lable1.enabled = YES;
         }
     }
-}
-- (IBAction)tuichu:(UIButton *)sender forEvent:(UIEvent *)event
-{
-    NSLog(@"sad");
-    [PFUser logOut];
-    [self read];
+
 }
 @end

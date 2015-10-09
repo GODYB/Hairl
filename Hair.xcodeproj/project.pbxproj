@@ -45,6 +45,11 @@
 		84C73EF21BAE644B00773C98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C73EF11BAE644B00773C98 /* Images.xcassets */; };
 		84C73EF51BAE644B00773C98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C73EF31BAE644B00773C98 /* LaunchScreen.xib */; };
 		84C73F011BAE644B00773C98 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73F001BAE644B00773C98 /* __Tests.m */; };
+		84C9D16E1BC7DDD6001EEF56 /* ClickTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9D16B1BC7DDD6001EEF56 /* ClickTableViewCell.m */; };
+		84C9D16F1BC7DDD6001EEF56 /* ClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9D16D1BC7DDD6001EEF56 /* ClickViewController.m */; };
+		84C9D1741BC7DE54001EEF56 /* MyRewardViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9D1711BC7DE54001EEF56 /* MyRewardViewViewController.m */; };
+		84C9D1751BC7DE54001EEF56 /* rewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9D1731BC7DE54001EEF56 /* rewardViewController.m */; };
+		84C9D1791BC7E1D0001EEF56 /* ABCIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9D1781BC7E1D0001EEF56 /* ABCIntroView.m */; };
 		84D13FCD1BB3D0800037EB03 /* 定位(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 84D13FCC1BB3D0800037EB03 /* 定位(1).png */; };
 		84D13FCF1BB3D08A0037EB03 /* 个人信息(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 84D13FCE1BB3D08A0037EB03 /* 个人信息(1).png */; };
 		84DC34401BB91EE3004BF93A /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC343F1BB91EE3004BF93A /* LeftViewController.m */; };
@@ -129,6 +134,16 @@
 		84C73EFA1BAE644B00773C98 /* 造型Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "造型Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C73EFF1BAE644B00773C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C73F001BAE644B00773C98 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
+		84C9D16A1BC7DDD6001EEF56 /* ClickTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickTableViewCell.h; sourceTree = "<group>"; };
+		84C9D16B1BC7DDD6001EEF56 /* ClickTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickTableViewCell.m; sourceTree = "<group>"; };
+		84C9D16C1BC7DDD6001EEF56 /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
+		84C9D16D1BC7DDD6001EEF56 /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
+		84C9D1701BC7DE54001EEF56 /* MyRewardViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRewardViewViewController.h; sourceTree = "<group>"; };
+		84C9D1711BC7DE54001EEF56 /* MyRewardViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRewardViewViewController.m; sourceTree = "<group>"; };
+		84C9D1721BC7DE54001EEF56 /* rewardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewardViewController.h; sourceTree = "<group>"; };
+		84C9D1731BC7DE54001EEF56 /* rewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rewardViewController.m; sourceTree = "<group>"; };
+		84C9D1771BC7E1D0001EEF56 /* ABCIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCIntroView.h; sourceTree = "<group>"; };
+		84C9D1781BC7E1D0001EEF56 /* ABCIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCIntroView.m; sourceTree = "<group>"; };
 		84D13FCC1BB3D0800037EB03 /* 定位(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位(1).png"; sourceTree = "<group>"; };
 		84D13FCE1BB3D08A0037EB03 /* 个人信息(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人信息(1).png"; sourceTree = "<group>"; };
 		84DC343E1BB91EE3004BF93A /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -163,6 +178,7 @@
 		79E5B94E1BB5247A00491948 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				84C9D1761BC7E1D0001EEF56 /* ABCIntroView */,
 				79E5B9521BB5257500491948 /* ECSlidingViewController */,
 				84B9EE771BB2CFD500A5E6A8 /* EAIntroView */,
 			);
@@ -289,6 +305,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		84C9D1761BC7E1D0001EEF56 /* ABCIntroView */ = {
+			isa = PBXGroup;
+			children = (
+				84C9D1771BC7E1D0001EEF56 /* ABCIntroView.h */,
+				84C9D1781BC7E1D0001EEF56 /* ABCIntroView.m */,
+			);
+			path = ABCIntroView;
+			sourceTree = "<group>";
+		};
 		84F880101BAF91D2007F2495 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +356,14 @@
 				79EB60DE1BBA5F89000808B9 /* goodsViewController.m */,
 				79EFE9F51BC6248F0033D415 /* uploadViewController.h */,
 				79EFE9F61BC6248F0033D415 /* uploadViewController.m */,
+				84C9D1721BC7DE54001EEF56 /* rewardViewController.h */,
+				84C9D1731BC7DE54001EEF56 /* rewardViewController.m */,
+				84C9D1701BC7DE54001EEF56 /* MyRewardViewViewController.h */,
+				84C9D1711BC7DE54001EEF56 /* MyRewardViewViewController.m */,
+				84C9D16A1BC7DDD6001EEF56 /* ClickTableViewCell.h */,
+				84C9D16B1BC7DDD6001EEF56 /* ClickTableViewCell.m */,
+				84C9D16C1BC7DDD6001EEF56 /* ClickViewController.h */,
+				84C9D16D1BC7DDD6001EEF56 /* ClickViewController.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -446,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C73EEA1BAE644B00773C98 /* __.xcdatamodeld in Sources */,
+				84C9D1751BC7DE54001EEF56 /* rewardViewController.m in Sources */,
 				79E5B9651BB525BC00491948 /* UIViewController+ECSlidingViewController.m in Sources */,
 				79E5B9641BB525BC00491948 /* ECSlidingViewController.m in Sources */,
 				842194601BB69FD70046B2D3 /* HomewomenController.m in Sources */,
@@ -453,13 +487,17 @@
 				790176761BB6927600D14045 /* LoginViewController.m in Sources */,
 				79EB60DF1BBA5F89000808B9 /* goodsViewController.m in Sources */,
 				84A630831BB15F5600A53BFD /* storageMgr.m in Sources */,
+				84C9D1791BC7E1D0001EEF56 /* ABCIntroView.m in Sources */,
 				84A630841BB15F5600A53BFD /* Utilities.m in Sources */,
 				8421945D1BB699820046B2D3 /* ForgetViewController.m in Sources */,
 				842194661BB6A0AA0046B2D3 /* storeViewController.m in Sources */,
+				84C9D16F1BC7DDD6001EEF56 /* ClickViewController.m in Sources */,
 				790176791BB69B4500D14045 /* HomeViewController.m in Sources */,
 				79E5B9621BB525BC00491948 /* ECSlidingInteractiveTransition.m in Sources */,
+				84C9D1741BC7DE54001EEF56 /* MyRewardViewViewController.m in Sources */,
 				84C73EE71BAE644B00773C98 /* AppDelegate.m in Sources */,
 				8421945A1BB698930046B2D3 /* SignupViewController.m in Sources */,
+				84C9D16E1BC7DDD6001EEF56 /* ClickTableViewCell.m in Sources */,
 				7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */,
 				84C73EE41BAE644B00773C98 /* main.m in Sources */,
 				79E5B9601BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m in Sources */,

@@ -10,14 +10,14 @@
 	<string>Hair</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4D46BC554B6F243E8DEEC5F09C61C8EADC53CD1E</key>
+		<key>B1B72191221286EF0FE68B19B37C7537531EB409</key>
 		<string>https://github.com/GODYB/Hairl.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Hair.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4D46BC554B6F243E8DEEC5F09C61C8EADC53CD1E</key>
+		<key>B1B72191221286EF0FE68B19B37C7537531EB409</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4D46BC554B6F243E8DEEC5F09C61C8EADC53CD1E</string>
+	<string>B1B72191221286EF0FE68B19B37C7537531EB409</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4D46BC554B6F243E8DEEC5F09C61C8EADC53CD1E</string>
+			<string>B1B72191221286EF0FE68B19B37C7537531EB409</string>
 			<key>IDESourceControlWCCName</key>
 			<string>hairt</string>
 		</dict>
