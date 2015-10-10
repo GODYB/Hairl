@@ -627,7 +627,7 @@
                                     <action selector="tuichu:forEvent:" destination="19y-rt-EEM" eventType="touchUpInside" id="8M9-8K-c2v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3i-GO-jut">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3i-GO-jut">
                                 <rect key="frame" x="96" y="405" width="74" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ElZ-pY-Cqj"/>
@@ -635,8 +635,10 @@
                                 </constraints>
                                 <state key="normal" title="订单">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="dingdan:forEvent:" destination="19y-rt-EEM" eventType="touchUpInside" id="e1S-70-etF"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="图标B.png" translatesAutoresizingMaskIntoConstraints="NO" id="bJJ-7C-KRJ">
                                 <rect key="frame" x="29" y="402" width="60" height="40"/>
@@ -927,7 +929,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGL-VQ-RwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675.5" y="4429.5"/>
+            <point key="canvasLocation" x="3487.5" y="4429.5"/>
         </scene>
         <!--发布悬赏-->
         <scene sceneID="D1Z-Le-by4">
@@ -1090,15 +1092,6 @@
                                     <action selector="queding:forEvent:" destination="ngn-Qj-VRQ" eventType="touchUpInside" id="m5B-oy-Wyy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpJ-aW-V2R">
-                                <rect key="frame" x="292" y="607" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="e4M-WO-oVP" kind="show" id="hV9-Gk-2uP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -1157,10 +1150,10 @@
             </objects>
             <point key="canvasLocation" x="1785.5" y="3617.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Rder View Controller-->
         <scene sceneID="RlE-mR-eLg">
             <objects>
-                <viewController id="Bky-lE-8bC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Iddd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bky-lE-8bC" customClass="rderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pyO-Iq-icE"/>
                         <viewControllerLayoutGuide type="bottom" id="Tyl-UX-p6X"/>
@@ -1194,6 +1187,9 @@
                                         <exclude reference="EMQ-3d-AyW"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Mio-yB-0ug" kind="show" id="Jyj-Mt-Vxh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL0-Zc-qbi">
                                 <rect key="frame" x="80" y="282" width="123" height="30"/>
@@ -1428,11 +1424,12 @@
                             <constraint firstItem="GLh-Qe-XJX" firstAttribute="top" secondItem="1Ev-iD-7zY" secondAttribute="top" id="vvB-L2-v3R"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="skm-Io-Uhq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vzm-1Q-yfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2215.5" y="4429.5"/>
+            <point key="canvasLocation" x="2593.5" y="4428.5"/>
         </scene>
         <!--登录-->
         <scene sceneID="Xow-Jb-Y07">
@@ -2035,26 +2032,6 @@
             <point key="canvasLocation" x="2202.5" y="3643.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ykR-c9-Ebu">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e4M-WO-oVP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="I9W-Rg-tfr"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pSH-vy-QKF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Bky-lE-8bC" kind="relationship" relationship="rootViewController" id="dHC-qu-oFr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HLT-JI-XLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1274.5" y="4421.5"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="WXJ-Ak-7xy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SGn-kK-7e5" sceneMemberID="viewController">
@@ -2172,6 +2149,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1e9-t2-jVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4420.5" y="1927.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xoc-W7-csH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mio-yB-0ug" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gY9-Q9-jh7"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="81M-aT-7D8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MAU-0i-NS1" kind="relationship" relationship="rootViewController" id="yOR-ON-sL1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxg-hD-crf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2215" y="4429"/>
         </scene>
     </scenes>
     <resources>
