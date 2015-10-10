@@ -30,7 +30,7 @@
     _shuzu = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4", nil];
     //[PFUser logOut];
 //  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestData) name:@"refreshHome" object:nil];
-    [self requestData];
+    
      [NSThread sleepForTimeInterval:1.5];   //设置进程停止2秒
     
 //    NSString *path = NSHomeDirectory();//主目录
@@ -82,8 +82,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
    
-    
-    
+
+    [self requestData];
     [[storageMgr singletonStorageMgr] removeObjectForKey:@"rukou"];
     [[storageMgr singletonStorageMgr] addKeyAndValue:@"rukou" And:@0]
     ;
@@ -209,10 +209,12 @@
     [query selectKeys:@[@"cityName"]];
     
     //    NSLog(@"%@",query);
-    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+//    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    [SVProgressHUD show];
     [query findObjectsInBackgroundWithBlock:^(NSArray *returnedObjects, NSError *error)
      {
-         [aiv stopAnimating];
+//         [aiv stopAnimating];
+          [SVProgressHUD dismiss];
          if (!error)
          {
              _objectsForShow = returnedObjects;
@@ -303,11 +305,12 @@
     if(_isButtion == YES){
         _isButtion = NO;
         _tableView.hidden = YES;
-        
+       
         
     }else if(_isButtion == NO) {
         _isButtion = YES;
         _tableView.hidden = NO;
+        
         
     }
 

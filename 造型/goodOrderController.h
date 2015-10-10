@@ -11,5 +11,14 @@
 @interface goodOrderController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *Storephoto;
 @property (weak, nonatomic) IBOutlet UIImageView *package;
+@property (weak, nonatomic) IBOutlet UIImageView *money;
+@property (weak, nonatomic) IBOutlet UIImageView *store;
+@property (weak, nonatomic) IBOutlet UILabel *Newpackage;
+@property (weak, nonatomic) IBOutlet UILabel *Newmoney;
+@property (weak, nonatomic) IBOutlet UILabel *Newstore;
+@property (weak, nonatomic) IBOutlet UITextField *meitem;
+
+@property (strong, nonatomic) PFObject *like;
+@property(strong,nonatomic)NSArray*objectsForShow;
 
 @end

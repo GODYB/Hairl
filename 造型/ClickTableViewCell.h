@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UIImageView *imgge;
 @property (weak, nonatomic) IBOutlet UIImageView *Oneicon;
+@property (weak, nonatomic) IBOutlet UIImageView *Twoico;
 
 @end

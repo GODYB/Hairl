@@ -81,9 +81,12 @@
     }
     
     UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+//    [SVProgressHUD show];
+
     //登录的方法
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error)
      {
+//         [SVProgressHUD dismiss];
          [aiv stopAnimating];
          if (user)
          {

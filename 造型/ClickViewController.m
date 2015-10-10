@@ -7,7 +7,7 @@
 //
 
 #import "ClickViewController.h"
-#import"goodsViewController.h"
+#import"goodOrderController.h"
 @interface ClickViewController ()
 
 @end
@@ -125,20 +125,19 @@
    
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    PFObject *object = [_objectsForShow objectAtIndex:indexPath.row];
-//    goodsViewController *pvc = [Utilities getStoryboardInstanceByIdentity:@"Add"];
-//    //    PFObject *par = object[@"owner"];
-//    //    pvc.ownername = par;
-//    pvc.item = object;
-//    //    pvc.kro =object;
-//    pvc.hidesBottomBarWhenPushed = YES;//把切换按钮隐藏掉
-//    [self.navigationController pushViewController:pvc animated:YES];
-//    
-//    
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PFObject *object = [_objectsForShow objectAtIndex:indexPath.row];
+   goodOrderController *pvc = [Utilities getStoryboardInstanceByIdentity:@"ASD"];
+    //    PFObject *par = object[@"owner"];
+    //    pvc.ownername = par;
+    pvc.like = object;
+    pvc.hidesBottomBarWhenPushed = YES;//把切换按钮隐藏掉
+    [self.navigationController pushViewController:pvc animated:YES];
+    
+    
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _objectsForShow.count;
 }
@@ -173,8 +172,10 @@
     
     if ([[[storageMgr singletonStorageMgr] objectForKey:@"background"] integerValue] == 0) {
         cell.Oneicon.image=[UIImage imageNamed:@"TB-4"];
+        cell.Twoico.image=[UIImage imageNamed:@"TB-10"];
     } else {
          cell.Oneicon.image=[UIImage imageNamed:@"TB-5"];
+         cell.Twoico.image=[UIImage imageNamed:@"TB-8"];
     }
     
       cell.packname.text = [NSString stringWithFormat:@"%@",object[@"productName"]];

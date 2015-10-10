@@ -11,6 +11,10 @@
 		790176791BB69B4500D14045 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790176781BB69B4500D14045 /* HomeViewController.m */; };
 		7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901767B1BB69CEB00D14045 /* TabViewController.m */; };
 		793256391BC8EC1C0069FB69 /* goodOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793256381BC8EC1C0069FB69 /* goodOrderController.m */; };
+		793256431BC91E8B0069FB69 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932563C1BC91E8B0069FB69 /* SVRadialGradientLayer.m */; };
+		793256441BC91E8B0069FB69 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932563D1BC91E8B0069FB69 /* SVProgressHUD.m */; };
+		793256451BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 793256401BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m */; };
+		793256461BC91E8B0069FB69 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 793256411BC91E8B0069FB69 /* SVProgressHUD.bundle */; };
 		79E5B9601BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E5B9541BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m */; };
 		79E5B9611BB525BC00491948 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E5B9561BB525BC00491948 /* ECSlidingAnimationController.m */; };
 		79E5B9621BB525BC00491948 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E5B9591BB525BC00491948 /* ECSlidingInteractiveTransition.m */; };
@@ -80,6 +84,13 @@
 		7901767B1BB69CEB00D14045 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		793256371BC8EC1C0069FB69 /* goodOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goodOrderController.h; sourceTree = "<group>"; };
 		793256381BC8EC1C0069FB69 /* goodOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goodOrderController.m; sourceTree = "<group>"; };
+		7932563B1BC91E8B0069FB69 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		7932563C1BC91E8B0069FB69 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		7932563D1BC91E8B0069FB69 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		7932563E1BC91E8B0069FB69 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		7932563F1BC91E8B0069FB69 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		793256401BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		793256411BC91E8B0069FB69 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		79E5B9531BB525BC00491948 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
 		79E5B9541BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
 		79E5B9551BB525BC00491948 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
@@ -183,9 +194,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7932563A1BC91E770069FB69 /* Svi ZSQ */ = {
+			isa = PBXGroup;
+			children = (
+				7932563B1BC91E8B0069FB69 /* SVIndefiniteAnimatedView.h */,
+				7932563C1BC91E8B0069FB69 /* SVRadialGradientLayer.m */,
+				7932563D1BC91E8B0069FB69 /* SVProgressHUD.m */,
+				7932563E1BC91E8B0069FB69 /* SVProgressHUD.h */,
+				7932563F1BC91E8B0069FB69 /* SVRadialGradientLayer.h */,
+				793256401BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m */,
+				793256411BC91E8B0069FB69 /* SVProgressHUD.bundle */,
+			);
+			name = "Svi ZSQ";
+			sourceTree = "<group>";
+		};
 		79E5B94E1BB5247A00491948 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				7932563A1BC91E770069FB69 /* Svi ZSQ */,
 				84C9D1761BC7E1D0001EEF56 /* ABCIntroView */,
 				79E5B9521BB5257500491948 /* ECSlidingViewController */,
 				84B9EE771BB2CFD500A5E6A8 /* EAIntroView */,
@@ -471,6 +497,7 @@
 				84D13FCD1BB3D0800037EB03 /* 定位(1).png in Resources */,
 				84C73EF51BAE644B00773C98 /* LaunchScreen.xib in Resources */,
 				8414DC5E1BAFD2EF00D290F9 /* 图标C.png in Resources */,
+				793256461BC91E8B0069FB69 /* SVProgressHUD.bundle in Resources */,
 				84C73EF21BAE644B00773C98 /* Images.xcassets in Resources */,
 				84F880351BAFAAB6007F2495 /* 人物图标.png in Resources */,
 				849E45491BC8BC7500AE4A2B /* Icon.png in Resources */,
@@ -511,8 +538,11 @@
 				79E5B9621BB525BC00491948 /* ECSlidingInteractiveTransition.m in Sources */,
 				84C9D1741BC7DE54001EEF56 /* MyRewardViewViewController.m in Sources */,
 				84C73EE71BAE644B00773C98 /* AppDelegate.m in Sources */,
+				793256431BC91E8B0069FB69 /* SVRadialGradientLayer.m in Sources */,
+				793256441BC91E8B0069FB69 /* SVProgressHUD.m in Sources */,
 				8421945A1BB698930046B2D3 /* SignupViewController.m in Sources */,
 				84C9D16E1BC7DDD6001EEF56 /* ClickTableViewCell.m in Sources */,
+				793256451BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m in Sources */,
 				7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */,
 				84C73EE41BAE644B00773C98 /* main.m in Sources */,
 				793256391BC8EC1C0069FB69 /* goodOrderController.m in Sources */,

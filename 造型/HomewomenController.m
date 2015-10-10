@@ -42,11 +42,13 @@
     _positioning.separatorStyle = UITableViewCellSeparatorStyleNone;
     _positioning.hidden =YES;
     
-    [self requestData];
+   
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self requestData];
+    
     [[storageMgr singletonStorageMgr] removeObjectForKey:@"rukou"];
     [[storageMgr singletonStorageMgr] addKeyAndValue:@"rukou" And:@1];
     
@@ -80,16 +82,19 @@
 */
 -(void)requestData {
     
-    
+ 
     PFQuery *query = [PFQuery queryWithClassName:@"city"];
     
     [query selectKeys:@[@"cityName"]];
     
     //    NSLog(@"%@",query);
-    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+//    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    
+       [SVProgressHUD show];
     [query findObjectsInBackgroundWithBlock:^(NSArray *returnedObjects, NSError *error)
      {
-         [aiv stopAnimating];
+//         [aiv stopAnimating];
+         [SVProgressHUD dismiss];
          if (!error)
          {
              _objectsForShow = returnedObjects;
