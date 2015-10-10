@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "ClickViewController.h"
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 {
@@ -15,6 +15,10 @@
 }
 - (IBAction)spreads:(UIBarButtonItem *)sender;
 - (IBAction)Trigger:(UIBarButtonItem *)sender;
+- (IBAction)xc:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)tangfa:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)ranfa:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)xjc:(UIButton *)sender forEvent:(UIEvent *)event;
 
 
 @end
@@ -23,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _shuzu = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4", nil];
     //[PFUser logOut];
 //  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestData) name:@"refreshHome" object:nil];
     [self requestData];
@@ -88,6 +93,15 @@
     ;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"enablePanGes" object:self];//激活滑动手势
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"disablePanGes" object:self];//关闭滑动手势
+}
 
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -240,6 +254,42 @@
         _tableView.hidden = NO;
     
     }
+}
+
+- (IBAction)xc:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[0];
+    NSLog(@"%@",_shuzu[0]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
+}
+
+- (IBAction)tangfa:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[1];
+    NSLog(@"%@",_shuzu[1]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
+}
+
+- (IBAction)ranfa:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[2];
+    NSLog(@"%@",_shuzu[2]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
+}
+
+- (IBAction)xjc:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[3];
+    NSLog(@"%@",_shuzu[3]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
 }
 
 

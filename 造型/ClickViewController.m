@@ -16,32 +16,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _tableview.tableFooterView = [[UIView alloc] init];//去掉tableView多余的横线
-    NSString *ga = _nameitem;
-    int ivalue = [ga intValue];
-    NSLog(@"%d",ivalue);
     //到Parserq去读取数据
     [self requestData];
     [self uiConfiguration];
-//    if ( ivalue == 1)
-//    {
-//        //到Parserq去读取数据
-//        [self requestData];
-//        [self uiConfiguration];
-//        NSLog(@"1111");
-//        
-//    }else if (ivalue == 2)
-//    {
-//        NSLog(@"2222");
-//        
-//    }else if (ivalue == 3)
-//    {
-//        NSLog(@"3333");
-//        
-//    }else if (ivalue == 4)
-//    {
-//        NSLog(@"44444");
-//    }
-//   
 }
 -(void)uiConfiguration
 {
@@ -98,7 +75,7 @@
 */
 - (void)requestData {
     PFQuery *query = [PFQuery queryWithClassName:@"product"];//查询的是那张表
-    if ([_nameitem isEqualToString:@"1"])
+    if ([_nameitem isEqualToString:@"3"])
     {
         [query whereKey:@"Type" equalTo:@"染发"];
         
@@ -106,7 +83,7 @@
     {
         [query whereKey:@"Type" equalTo:@"烫发"];
         
-    } else if ([_nameitem isEqualToString:@"3"])
+    } else if ([_nameitem isEqualToString:@"1"])
     {
         [query whereKey:@"Type" equalTo:@"洗吹"];
         

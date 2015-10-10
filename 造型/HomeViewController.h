@@ -23,6 +23,6 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *location;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
+@property (strong, nonatomic)NSArray *shuzu;
 
 @end

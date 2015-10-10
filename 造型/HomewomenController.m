@@ -7,7 +7,7 @@
 //
 
 #import "HomewomenController.h"
-
+#import "ClickViewController.h"
 @interface HomewomenController ()
 
 {
@@ -16,6 +16,11 @@
 
 - (IBAction)spreads:(UIBarButtonItem *)sender;
 - (IBAction)forpoing:(UIBarButtonItem *)sender;
+- (IBAction)ranfa:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)tangfa:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)xc:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)xjc:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)huli:(UIButton *)sender forEvent:(UIEvent *)event;
 
 @end
 
@@ -23,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _shuzu = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4", @"5",nil];
     // Do any additional setup after loading the view.
     /**
      *UserDfauls 的接受
@@ -47,6 +53,15 @@
     [[storageMgr singletonStorageMgr] removeObjectForKey:@"background"];
     [[storageMgr singletonStorageMgr] addKeyAndValue:@"background" And:@1]
     ;
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"enablePanGes" object:self];//激活滑动手势
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"disablePanGes" object:self];//关闭滑动手势
 }
 
 - (void)didReceiveMemoryWarning {
@@ -133,5 +148,50 @@
         _positioning.hidden = NO;
         
     }
+}
+
+- (IBAction)ranfa:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[2];
+    NSLog(@"%@",_shuzu[2]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
+}
+
+- (IBAction)tangfa:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[1];
+    NSLog(@"%@",_shuzu[1]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
+}
+
+- (IBAction)xc:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[0];
+    NSLog(@"%@",_shuzu[0]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
+}
+
+- (IBAction)xjc:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[3];
+    NSLog(@"%@",_shuzu[3]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
+}
+
+- (IBAction)huli:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    ClickViewController *receive = [Utilities getStoryboardInstanceByIdentity:@"IdClick"];
+    receive.nameitem = _shuzu[4];
+    NSLog(@"%@",_shuzu[4]);
+    receive.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+    [self.navigationController pushViewController:receive animated:YES];
 }
 @end

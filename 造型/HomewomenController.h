@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *location;
 @property (weak, nonatomic) IBOutlet UITableView *positioning;
 @property(strong,nonatomic)NSArray*objectsForShow;
+@property (strong, nonatomic)NSArray *shuzu;
 @end

@@ -29,6 +29,7 @@
 		8421945D1BB699820046B2D3 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421945C1BB699820046B2D3 /* ForgetViewController.m */; };
 		842194601BB69FD70046B2D3 /* HomewomenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421945F1BB69FD70046B2D3 /* HomewomenController.m */; };
 		842194661BB6A0AA0046B2D3 /* storeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842194651BB6A0AA0046B2D3 /* storeViewController.m */; };
+		849E45491BC8BC7500AE4A2B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 849E45481BC8BC7500AE4A2B /* Icon.png */; };
 		84A630741BB15E8F00A53BFD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A630731BB15E8F00A53BFD /* AudioToolbox.framework */; };
 		84A630761BB15EDB00A53BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A630751BB15EDB00A53BFD /* SystemConfiguration.framework */; };
 		84A630781BB15EE900A53BFD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A630771BB15EE900A53BFD /* libsqlite3.dylib */; };
@@ -108,6 +109,7 @@
 		8421945F1BB69FD70046B2D3 /* HomewomenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomewomenController.m; sourceTree = "<group>"; };
 		842194641BB6A0AA0046B2D3 /* storeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = storeViewController.h; sourceTree = "<group>"; };
 		842194651BB6A0AA0046B2D3 /* storeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = storeViewController.m; sourceTree = "<group>"; };
+		849E45481BC8BC7500AE4A2B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		84A630731BB15E8F00A53BFD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84A630751BB15EDB00A53BFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		84A630771BB15EE900A53BFD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -317,6 +319,7 @@
 		84F880101BAF91D2007F2495 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				849E45481BC8BC7500AE4A2B /* Icon.png */,
 				84D13FCE1BB3D08A0037EB03 /* 个人信息(1).png */,
 				84D13FCC1BB3D0800037EB03 /* 定位(1).png */,
 				8414DC601BAFD3EC00D290F9 /* 侧滑栏.png */,
@@ -460,6 +463,7 @@
 				8414DC5E1BAFD2EF00D290F9 /* 图标C.png in Resources */,
 				84C73EF21BAE644B00773C98 /* Images.xcassets in Resources */,
 				84F880351BAFAAB6007F2495 /* 人物图标.png in Resources */,
+				849E45491BC8BC7500AE4A2B /* Icon.png in Resources */,
 				8414DC5D1BAFD2EF00D290F9 /* 图标B.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
