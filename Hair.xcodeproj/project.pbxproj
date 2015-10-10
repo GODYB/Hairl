@@ -10,6 +10,7 @@
 		790176761BB6927600D14045 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790176751BB6927600D14045 /* LoginViewController.m */; };
 		790176791BB69B4500D14045 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790176781BB69B4500D14045 /* HomeViewController.m */; };
 		7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901767B1BB69CEB00D14045 /* TabViewController.m */; };
+		793256391BC8EC1C0069FB69 /* goodOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793256381BC8EC1C0069FB69 /* goodOrderController.m */; };
 		79E5B9601BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E5B9541BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m */; };
 		79E5B9611BB525BC00491948 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E5B9561BB525BC00491948 /* ECSlidingAnimationController.m */; };
 		79E5B9621BB525BC00491948 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E5B9591BB525BC00491948 /* ECSlidingInteractiveTransition.m */; };
@@ -77,6 +78,8 @@
 		790176781BB69B4500D14045 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7901767A1BB69CEB00D14045 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
 		7901767B1BB69CEB00D14045 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		793256371BC8EC1C0069FB69 /* goodOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goodOrderController.h; sourceTree = "<group>"; };
+		793256381BC8EC1C0069FB69 /* goodOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goodOrderController.m; sourceTree = "<group>"; };
 		79E5B9531BB525BC00491948 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
 		79E5B9541BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
 		79E5B9551BB525BC00491948 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 				84C9D16D1BC7DDD6001EEF56 /* ClickViewController.m */,
 				849E454A1BC8D6DB00AE4A2B /* rderViewController.h */,
 				849E454B1BC8D6DB00AE4A2B /* rderViewController.m */,
+				793256371BC8EC1C0069FB69 /* goodOrderController.h */,
+				793256381BC8EC1C0069FB69 /* goodOrderController.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				84C9D16E1BC7DDD6001EEF56 /* ClickTableViewCell.m in Sources */,
 				7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */,
 				84C73EE41BAE644B00773C98 /* main.m in Sources */,
+				793256391BC8EC1C0069FB69 /* goodOrderController.m in Sources */,
 				79E5B9601BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				79EB60DC1BBA3DCD000808B9 /* AllTableViewCell.m in Sources */,
 				84B9EE7C1BB2CFD500A5E6A8 /* EAIntroPage.m in Sources */,

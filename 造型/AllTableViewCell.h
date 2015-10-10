@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UIImageView *Newtime;
 
+@property (weak, nonatomic) IBOutlet UIImageView *Newaddress;
 
 @end

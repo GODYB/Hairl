@@ -31,6 +31,8 @@ if ([[[storageMgr singletonStorageMgr] objectForKey:@"background"] integerValue]
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BJ-2"]];
     
 }
+    
+    
 [super viewWillAppear:animated];//视图出现之前做的事情
 }
 
@@ -120,6 +122,14 @@ if ([[[storageMgr singletonStorageMgr] objectForKey:@"background"] integerValue]
             });
         }
     }];
+    if ([[[storageMgr singletonStorageMgr] objectForKey:@"background"] integerValue] == 0) {
+        cell.Newtime.image=[UIImage imageNamed:@"TB-6"];
+        cell.Newaddress.image=[UIImage imageNamed:@"TB-7"];
+    } else {
+        cell.Newtime.image=[UIImage imageNamed:@"TB-1"];
+        cell.Newaddress.image=[UIImage imageNamed:@"TB-2"];
+    }
+    
     cell.name.text = [NSString stringWithFormat:@"%@",object[@"businessName"]];
     cell.time.text = [NSString stringWithFormat:@"%@",object[@"businesshours"]];
       cell.address.text = [NSString stringWithFormat:@"%@",object[@"address"]];

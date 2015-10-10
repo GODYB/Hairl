@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *packname;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UIImageView *imgge;
+@property (weak, nonatomic) IBOutlet UIImageView *Oneicon;
 
 @end

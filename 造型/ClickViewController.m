@@ -7,6 +7,7 @@
 //
 
 #import "ClickViewController.h"
+#import"goodsViewController.h"
 @interface ClickViewController ()
 
 @end
@@ -19,6 +20,18 @@
     //到Parserq去读取数据
     [self requestData];
     [self uiConfiguration];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    //单利化全局变量
+    if ([[[storageMgr singletonStorageMgr] objectForKey:@"background"] integerValue] == 0) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BJ-1"]];
+//        cell.image=[UIColor colorWithPatternImage:[UIImage imageNamed:@"BJ-1"]];
+    } else {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BJ-2"]];
+        
+    }
+    [super viewWillAppear:animated];//视图出现之前做的事情
 }
 -(void)uiConfiguration
 {
@@ -111,6 +124,21 @@
     }];
    
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    PFObject *object = [_objectsForShow objectAtIndex:indexPath.row];
+//    goodsViewController *pvc = [Utilities getStoryboardInstanceByIdentity:@"Add"];
+//    //    PFObject *par = object[@"owner"];
+//    //    pvc.ownername = par;
+//    pvc.item = object;
+//    //    pvc.kro =object;
+//    pvc.hidesBottomBarWhenPushed = YES;//把切换按钮隐藏掉
+//    [self.navigationController pushViewController:pvc animated:YES];
+//    
+//    
+//}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _objectsForShow.count;
 }
@@ -143,7 +171,11 @@
         }
     }];
     
-    
+    if ([[[storageMgr singletonStorageMgr] objectForKey:@"background"] integerValue] == 0) {
+        cell.Oneicon.image=[UIImage imageNamed:@"TB-4"];
+    } else {
+         cell.Oneicon.image=[UIImage imageNamed:@"TB-5"];
+    }
     
       cell.packname.text = [NSString stringWithFormat:@"%@",object[@"productName"]];
       cell.price.text = [NSString stringWithFormat:@"%@",object[@"productPrice"]];
