@@ -50,6 +50,8 @@
 		84BDCD211BCB9C60009EF3EF /* lineOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD1C1BCB9C60009EF3EF /* lineOrderTableViewCell.m */; };
 		84BDCD221BCB9C60009EF3EF /* lineOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */; };
 		84BDCD231BCB9C60009EF3EF /* twoLineOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */; };
+		84BDCD371BCBB3CC009EF3EF /* orderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */; };
+		84BDCD381BCBB3CC009EF3EF /* orderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD361BCBB3CC009EF3EF /* orderViewController.m */; };
 		84C73EE41BAE644B00773C98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE31BAE644B00773C98 /* main.m */; };
 		84C73EE71BAE644B00773C98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE61BAE644B00773C98 /* AppDelegate.m */; };
 		84C73EEA1BAE644B00773C98 /* __.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE81BAE644B00773C98 /* __.xcdatamodeld */; };
@@ -156,6 +158,10 @@
 		84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lineOrderViewController.m; sourceTree = "<group>"; };
 		84BDCD1F1BCB9C60009EF3EF /* twoLineOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twoLineOrderViewController.h; sourceTree = "<group>"; };
 		84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twoLineOrderViewController.m; sourceTree = "<group>"; };
+		84BDCD331BCBB3CC009EF3EF /* orderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderTableViewCell.h; sourceTree = "<group>"; };
+		84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderTableViewCell.m; sourceTree = "<group>"; };
+		84BDCD351BCBB3CC009EF3EF /* orderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderViewController.h; sourceTree = "<group>"; };
+		84BDCD361BCBB3CC009EF3EF /* orderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderViewController.m; sourceTree = "<group>"; };
 		84C73EDE1BAE644B00773C98 /* 造型.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "造型.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C73EE21BAE644B00773C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C73EE31BAE644B00773C98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -428,6 +434,10 @@
 				84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */,
 				84BDCD1F1BCB9C60009EF3EF /* twoLineOrderViewController.h */,
 				84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */,
+				84BDCD331BCBB3CC009EF3EF /* orderTableViewCell.h */,
+				84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */,
+				84BDCD351BCBB3CC009EF3EF /* orderViewController.h */,
+				84BDCD361BCBB3CC009EF3EF /* orderViewController.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -552,6 +562,7 @@
 				79E5B9631BB525BC00491948 /* ECSlidingSegue.m in Sources */,
 				84BDCD211BCB9C60009EF3EF /* lineOrderTableViewCell.m in Sources */,
 				790176761BB6927600D14045 /* LoginViewController.m in Sources */,
+				84BDCD381BCBB3CC009EF3EF /* orderViewController.m in Sources */,
 				79EB60DF1BBA5F89000808B9 /* goodsViewController.m in Sources */,
 				84A630831BB15F5600A53BFD /* storageMgr.m in Sources */,
 				84C9D1791BC7E1D0001EEF56 /* ABCIntroView.m in Sources */,
@@ -582,6 +593,7 @@
 				84DC34401BB91EE3004BF93A /* LeftViewController.m in Sources */,
 				79EFE9F71BC6248F0033D415 /* uploadViewController.m in Sources */,
 				84B9EE7D1BB2CFD500A5E6A8 /* EAIntroView.m in Sources */,
+				84BDCD371BCBB3CC009EF3EF /* orderTableViewCell.m in Sources */,
 				79E5B9611BB525BC00491948 /* ECSlidingAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

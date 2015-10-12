@@ -9,6 +9,7 @@
 #import "rderViewController.h"
 
 @interface rderViewController ()
+- (IBAction)fanghui:(UIBarButtonItem *)sender;
 
 @end
 
@@ -34,4 +35,8 @@
 }
 */
 
+- (IBAction)fanghui:(UIBarButtonItem *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

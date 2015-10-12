@@ -58,8 +58,9 @@
     NSLog(@"%@", currentUser);
     if (currentUser) {
         NSLog(@"Y");
-        _lable1.text = currentUser[@"realname"];
-        _lable2.text=[NSString stringWithFormat:@"名称:   %@", currentUser[@"username"]];
+       // _lable1.text = currentUser[@"realname"];
+        _lable1.text=[NSString stringWithFormat:@"姓名:   %@", currentUser[@"realname"]];
+        _lable2.text=[NSString stringWithFormat:@"昵称:   %@", currentUser[@"username"]];
         
         PFFile *photo = currentUser[@"photo"];
         [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
@@ -74,7 +75,6 @@
     }else{
          _Head.image = Nil;
         _lable2.text= Nil;
-        _lable1 = Nil;
     }
 }
 - (IBAction)tuichu:(UIButton *)sender forEvent:(UIEvent *)event
@@ -82,6 +82,7 @@
     NSLog(@"sad");
     [PFUser logOut];
     [self read];
+    _lable1.text = @"请先登录";
 }
 
 - (IBAction)chuping:(UITapGestureRecognizer *)sender
