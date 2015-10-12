@@ -2398,6 +2398,7 @@
                                             <outlet property="ordername" destination="CiG-Yt-G37" id="MyT-Nu-GRE"/>
                                             <outlet property="orderprice" destination="VOM-C3-gLr" id="kac-1r-6Yy"/>
                                             <outlet property="ordertime" destination="tce-ZH-irR" id="JgT-v7-23o"/>
+                                            <segue destination="u5v-pK-GI5" kind="show" identifier="Item" id="lnX-ZC-Xge"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2424,6 +2425,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCN-n4-kVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4286.5" y="5182.5"/>
+        </scene>
+        <!--Two Order View Controller-->
+        <scene sceneID="GIA-Ar-JMP">
+            <objects>
+                <viewController id="u5v-pK-GI5" customClass="TwoOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WsO-kp-ULJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uv4-TQ-6UU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DQf-G1-kBO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-Fp-fqT">
+                                <rect key="frame" x="166" y="102" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9v-Ey-emh">
+                                <rect key="frame" x="166" y="198" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F27-Xo-km2">
+                                <rect key="frame" x="166" y="311" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZz-b8-PCp">
+                                <rect key="frame" x="166" y="407" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="orderPice" destination="i9v-Ey-emh" id="TWM-qk-A1h"/>
+                        <outlet property="ordername" destination="hvo-Fp-fqT" id="yra-wz-T2D"/>
+                        <outlet property="ordertime" destination="F27-Xo-km2" id="fPQ-vc-y25"/>
+                        <outlet property="shuoming" destination="UZz-b8-PCp" id="arf-tQ-mSm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wid-BR-RsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4789.5" y="5176.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nNa-o8-1eo">

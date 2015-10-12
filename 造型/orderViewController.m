@@ -8,6 +8,7 @@
 
 #import "orderViewController.h"
 #import "orderTableViewCell.h"
+#import "TwoOrderViewController.h"
 @interface orderViewController ()
 
 @end
@@ -64,7 +65,7 @@
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         PFQuery *query = [PFQuery queryWithClassName:@"Order"];//查询的是那张表
-       [query selectKeys:@[@"orderName",@"orderDate",@"orderPrice"]];//查询条件，自己数据库里的城市后面的是城市名
+       //[query selectKeys:@[@"orderName",@"orderDate",@"orderPrice"]];//查询条件，自己数据库里的城市后面的是城市名
         UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
         [query findObjectsInBackgroundWithBlock:^(NSArray *returnedObjects, NSError *error) {
             [aiv stopAnimating];
@@ -109,5 +110,20 @@
     cell.orderprice.text = [NSString stringWithFormat:@"%@",object[@"orderPrice"]];
     cell.ordertime.text = [NSString stringWithFormat:@"%@",dateString];
     return cell;
+}
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"Item"])
+    {
+        //把本页的数据传给下一页
+        PFObject *object = [_objectsForShow objectAtIndex:[_tableview indexPathForSelectedRow].row];//获取tableView 选中当前行的数据
+        TwoOrderViewController *miVC = segue.destinationViewController;//去到那个控制器
+        miVC.orderitem = object;
+        miVC.hidesBottomBarWhenPushed = YES;//隐藏切换按钮
+        
+    }
 }
 @end

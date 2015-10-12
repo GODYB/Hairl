@@ -52,6 +52,7 @@
 		84BDCD231BCB9C60009EF3EF /* twoLineOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */; };
 		84BDCD371BCBB3CC009EF3EF /* orderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */; };
 		84BDCD381BCBB3CC009EF3EF /* orderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD361BCBB3CC009EF3EF /* orderViewController.m */; };
+		84BDCD3E1BCBCB00009EF3EF /* TwoOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD3D1BCBCB00009EF3EF /* TwoOrderViewController.m */; };
 		84C73EE41BAE644B00773C98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE31BAE644B00773C98 /* main.m */; };
 		84C73EE71BAE644B00773C98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE61BAE644B00773C98 /* AppDelegate.m */; };
 		84C73EEA1BAE644B00773C98 /* __.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE81BAE644B00773C98 /* __.xcdatamodeld */; };
@@ -162,6 +163,8 @@
 		84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderTableViewCell.m; sourceTree = "<group>"; };
 		84BDCD351BCBB3CC009EF3EF /* orderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderViewController.h; sourceTree = "<group>"; };
 		84BDCD361BCBB3CC009EF3EF /* orderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderViewController.m; sourceTree = "<group>"; };
+		84BDCD3C1BCBCB00009EF3EF /* TwoOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoOrderViewController.h; sourceTree = "<group>"; };
+		84BDCD3D1BCBCB00009EF3EF /* TwoOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoOrderViewController.m; sourceTree = "<group>"; };
 		84C73EDE1BAE644B00773C98 /* 造型.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "造型.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C73EE21BAE644B00773C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C73EE31BAE644B00773C98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 				84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */,
 				84BDCD351BCBB3CC009EF3EF /* orderViewController.h */,
 				84BDCD361BCBB3CC009EF3EF /* orderViewController.m */,
+				84BDCD3C1BCBCB00009EF3EF /* TwoOrderViewController.h */,
+				84BDCD3D1BCBCB00009EF3EF /* TwoOrderViewController.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 				84BDCD231BCB9C60009EF3EF /* twoLineOrderViewController.m in Sources */,
 				8421945D1BB699820046B2D3 /* ForgetViewController.m in Sources */,
 				842194661BB6A0AA0046B2D3 /* storeViewController.m in Sources */,
+				84BDCD3E1BCBCB00009EF3EF /* TwoOrderViewController.m in Sources */,
 				849E454C1BC8D6DB00AE4A2B /* rderViewController.m in Sources */,
 				84C9D16F1BC7DDD6001EEF56 /* ClickViewController.m in Sources */,
 				790176791BB69B4500D14045 /* HomeViewController.m in Sources */,
