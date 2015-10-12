@@ -9,6 +9,9 @@
 #import "rewardViewController.h"
 #import "HomeViewController.h"
 @interface rewardViewController ()
+{
+    id hidden;
+}
 
 
 - (IBAction)queding:(UIButton *)sender forEvent:(UIEvent *)event;
@@ -17,7 +20,8 @@
 - (IBAction)xjc:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)tf:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)ddzs:(UIButton *)sender forEvent:(UIEvent *)event;
-- (IBAction)fanghui:(UIBarButtonItem *)sender;
+- (IBAction)fanghui:(UIButton *)sender forEvent:(UIEvent *)event;
+
 - (IBAction)rf:(UIButton *)sender forEvent:(UIEvent *)event;
 @end
 @implementation rewardViewController
@@ -93,6 +97,11 @@
         [_selection addObject:desi3];
     }
     [self showOrderText];
+}
+
+- (IBAction)fanghui:(UIButton *)sender forEvent:(UIEvent *)event
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)rf:(UIButton *)sender forEvent:(UIEvent *)event
@@ -228,10 +237,23 @@
     [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(timerFireMethod:) userInfo:Alert repeats:YES];
     [Alert show];
 }
-- (IBAction)fanghui:(UIBarButtonItem *)sender
+- (IBAction)guize:(UIButton *)sender forEvent:(UIEvent *)event
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
-
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        NSLog(@"dddddddddddddddddddddddddd");
+        rewardViewController *dingdan = [self.storyboard instantiateViewControllerWithIdentifier:@"Iddd"];
+        if (!hidden) {
+            //初始化导航控制器
+            UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:dingdan];
+            //动画效果
+            nc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+            //导航条隐藏掉
+            nc.navigationBarHidden = NO;
+            //类似那个箭头 跳转到第二个界面
+            //[self presentViewController:nc animated:YES completion:nil];
+             [self presentViewController:nc animated:YES completion:nil];
+        }
+    }
 }
-
 @end

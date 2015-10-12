@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *rf;
 @property (strong, nonatomic) NSMutableArray *selection;
 @property (weak, nonatomic) IBOutlet UIImageView *touxian;
+- (IBAction)guize:(UIButton *)sender forEvent:(UIEvent *)event;
 
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
 @end

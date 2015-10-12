@@ -1341,6 +1341,9 @@
                                 <state key="normal" image="AN-1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="fanghui:forEvent:" destination="ngn-Qj-VRQ" eventType="touchUpInside" id="oP1-tI-7f3"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="fanghui:" destination="ngn-Qj-VRQ" id="QrM-qd-RjZ"/>
@@ -1353,10 +1356,10 @@
                                 <state key="normal" image="AN-2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="guize:forEvent:" destination="ngn-Qj-VRQ" eventType="touchUpInside" id="ysY-mr-bU1"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="mdz-oj-aFc" kind="show" id="MfN-lg-IYl"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -2212,7 +2215,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GlL-qY-kqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2202.5" y="3643.5"/>
+            <point key="canvasLocation" x="2457.5" y="3668.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WXJ-Ak-7xy">
