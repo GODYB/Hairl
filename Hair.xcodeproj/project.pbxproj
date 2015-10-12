@@ -45,6 +45,8 @@
 		84A630841BB15F5600A53BFD /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A630821BB15F5600A53BFD /* Utilities.m */; };
 		84B9EE7C1BB2CFD500A5E6A8 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9EE791BB2CFD500A5E6A8 /* EAIntroPage.m */; };
 		84B9EE7D1BB2CFD500A5E6A8 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9EE7B1BB2CFD500A5E6A8 /* EAIntroView.m */; };
+		84BDCD191BCB915B009EF3EF /* mineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD161BCB915B009EF3EF /* mineTableViewCell.m */; };
+		84BDCD1A1BCB915B009EF3EF /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD181BCB915B009EF3EF /* mineViewController.m */; };
 		84C73EE41BAE644B00773C98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE31BAE644B00773C98 /* main.m */; };
 		84C73EE71BAE644B00773C98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE61BAE644B00773C98 /* AppDelegate.m */; };
 		84C73EEA1BAE644B00773C98 /* __.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE81BAE644B00773C98 /* __.xcdatamodeld */; };
@@ -141,6 +143,10 @@
 		84B9EE791BB2CFD500A5E6A8 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
 		84B9EE7A1BB2CFD500A5E6A8 /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
 		84B9EE7B1BB2CFD500A5E6A8 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
+		84BDCD151BCB915B009EF3EF /* mineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mineTableViewCell.h; sourceTree = "<group>"; };
+		84BDCD161BCB915B009EF3EF /* mineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mineTableViewCell.m; sourceTree = "<group>"; };
+		84BDCD171BCB915B009EF3EF /* mineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
+		84BDCD181BCB915B009EF3EF /* mineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mineViewController.m; sourceTree = "<group>"; };
 		84C73EDE1BAE644B00773C98 /* 造型.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "造型.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C73EE21BAE644B00773C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C73EE31BAE644B00773C98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -401,6 +407,10 @@
 				84C9D16D1BC7DDD6001EEF56 /* ClickViewController.m */,
 				849E454A1BC8D6DB00AE4A2B /* rderViewController.h */,
 				849E454B1BC8D6DB00AE4A2B /* rderViewController.m */,
+				84BDCD151BCB915B009EF3EF /* mineTableViewCell.h */,
+				84BDCD161BCB915B009EF3EF /* mineTableViewCell.m */,
+				84BDCD171BCB915B009EF3EF /* mineViewController.h */,
+				84BDCD181BCB915B009EF3EF /* mineViewController.m */,
 				793256371BC8EC1C0069FB69 /* goodOrderController.h */,
 				793256381BC8EC1C0069FB69 /* goodOrderController.m */,
 			);
@@ -537,10 +547,12 @@
 				790176791BB69B4500D14045 /* HomeViewController.m in Sources */,
 				79E5B9621BB525BC00491948 /* ECSlidingInteractiveTransition.m in Sources */,
 				84C9D1741BC7DE54001EEF56 /* MyRewardViewViewController.m in Sources */,
+				84BDCD191BCB915B009EF3EF /* mineTableViewCell.m in Sources */,
 				84C73EE71BAE644B00773C98 /* AppDelegate.m in Sources */,
 				793256431BC91E8B0069FB69 /* SVRadialGradientLayer.m in Sources */,
 				793256441BC91E8B0069FB69 /* SVProgressHUD.m in Sources */,
 				8421945A1BB698930046B2D3 /* SignupViewController.m in Sources */,
+				84BDCD1A1BCB915B009EF3EF /* mineViewController.m in Sources */,
 				84C9D16E1BC7DDD6001EEF56 /* ClickTableViewCell.m in Sources */,
 				793256451BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m in Sources */,
 				7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */,
