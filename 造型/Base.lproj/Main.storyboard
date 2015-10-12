@@ -1147,25 +1147,6 @@
             </objects>
             <point key="canvasLocation" x="2638.5" y="3643.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Gid-4L-afB">
-            <objects>
-                <viewController id="beT-2s-Yrb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jOd-2G-2rw"/>
-                        <viewControllerLayoutGuide type="bottom" id="AzU-1d-vSv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="evU-W5-kOb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oGL-VQ-RwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5029.5" y="4217.5"/>
-        </scene>
         <!--发布悬赏-->
         <scene sceneID="D1Z-Le-by4">
             <objects>
@@ -1424,6 +1405,9 @@
                                 <state key="normal" image="AN-3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Mio-yB-0ug" kind="show" id="5hW-jf-NaU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roe-VS-nBu">
                                 <rect key="frame" x="195" y="231" width="115" height="115"/>
@@ -1475,12 +1459,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ety-qA-ymc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3073.5" y="4445.5"/>
+            <point key="canvasLocation" x="3200.5" y="4419.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Line Order View Controller-->
         <scene sceneID="qCF-aD-UHS">
             <objects>
-                <viewController id="MAU-0i-NS1" sceneMemberID="viewController">
+                <viewController id="MAU-0i-NS1" customClass="lineOrderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qJo-RY-H8m"/>
                         <viewControllerLayoutGuide type="bottom" id="YGe-d0-KdW"/>
@@ -1493,7 +1477,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="120" id="aE3-1x-WjV">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="120" id="aE3-1x-WjV" customClass="lineOrderTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aE3-1x-WjV" id="X8y-gt-QYu">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1527,8 +1511,19 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="w00-H7-HDF" id="CwY-bv-gL9"/>
+                                            <outlet property="ordername" destination="vsq-Al-vzo" id="HQb-Il-p0U"/>
+                                            <outlet property="orderpeice" destination="knc-cq-59v" id="qzw-aB-JRi"/>
+                                            <outlet property="zhutai" destination="47M-UG-yKF" id="aaT-4b-Wln"/>
+                                            <segue destination="eYe-DY-wFg" kind="show" identifier="Item" id="Gf2-fL-iaQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MAU-0i-NS1" id="JAG-SN-Dcq"/>
+                                    <outlet property="delegate" destination="MAU-0i-NS1" id="w2D-JH-L1t"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1541,10 +1536,68 @@
                     </view>
                     <navigationItem key="navigationItem" id="skm-Io-Uhq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableview" destination="GLh-Qe-XJX" id="fmh-UO-VjM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vzm-1Q-yfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4217.5" y="4428.5"/>
+            <point key="canvasLocation" x="4298.5" y="4438.5"/>
+        </scene>
+        <!--Two Line Order View Controller-->
+        <scene sceneID="Exy-AQ-uZU">
+            <objects>
+                <viewController id="eYe-DY-wFg" customClass="twoLineOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKw-cY-JIO"/>
+                        <viewControllerLayoutGuide type="bottom" id="hqy-y0-muv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xlZ-Uy-I8Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSB-Xo-Sv2">
+                                <rect key="frame" x="0.0" y="50" width="375" height="132"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk8-gZ-94c">
+                                <rect key="frame" x="166" y="268" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-lp-TZO">
+                                <rect key="frame" x="166" y="340" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOF-ld-nKe">
+                                <rect key="frame" x="166" y="408" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX8-bY-pn6">
+                                <rect key="frame" x="79" y="506" width="245" height="129"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="image" destination="SSB-Xo-Sv2" id="gFZ-8D-Pec"/>
+                        <outlet property="ordername" destination="Tk8-gZ-94c" id="3qE-0T-Q9c"/>
+                        <outlet property="orderprice" destination="nlu-lp-TZO" id="XOA-Fn-EDT"/>
+                        <outlet property="ordertext" destination="SX8-bY-pn6" id="odM-20-Gxn"/>
+                        <outlet property="shuming" destination="AOF-ld-nKe" id="hPw-SX-GIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcU-eC-l7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4794.5" y="4438.5"/>
         </scene>
         <!--登录-->
         <scene sceneID="Xow-Jb-Y07">
@@ -2283,7 +2336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxg-hD-crf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3794.5" y="4429.5"/>
+            <point key="canvasLocation" x="3659.5" y="4428.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V5v-k7-YXn">

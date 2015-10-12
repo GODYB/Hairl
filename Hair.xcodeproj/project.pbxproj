@@ -47,6 +47,9 @@
 		84B9EE7D1BB2CFD500A5E6A8 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9EE7B1BB2CFD500A5E6A8 /* EAIntroView.m */; };
 		84BDCD191BCB915B009EF3EF /* mineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD161BCB915B009EF3EF /* mineTableViewCell.m */; };
 		84BDCD1A1BCB915B009EF3EF /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD181BCB915B009EF3EF /* mineViewController.m */; };
+		84BDCD211BCB9C60009EF3EF /* lineOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD1C1BCB9C60009EF3EF /* lineOrderTableViewCell.m */; };
+		84BDCD221BCB9C60009EF3EF /* lineOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */; };
+		84BDCD231BCB9C60009EF3EF /* twoLineOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */; };
 		84C73EE41BAE644B00773C98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE31BAE644B00773C98 /* main.m */; };
 		84C73EE71BAE644B00773C98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE61BAE644B00773C98 /* AppDelegate.m */; };
 		84C73EEA1BAE644B00773C98 /* __.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C73EE81BAE644B00773C98 /* __.xcdatamodeld */; };
@@ -147,6 +150,12 @@
 		84BDCD161BCB915B009EF3EF /* mineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mineTableViewCell.m; sourceTree = "<group>"; };
 		84BDCD171BCB915B009EF3EF /* mineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
 		84BDCD181BCB915B009EF3EF /* mineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mineViewController.m; sourceTree = "<group>"; };
+		84BDCD1B1BCB9C60009EF3EF /* lineOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lineOrderTableViewCell.h; sourceTree = "<group>"; };
+		84BDCD1C1BCB9C60009EF3EF /* lineOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lineOrderTableViewCell.m; sourceTree = "<group>"; };
+		84BDCD1D1BCB9C60009EF3EF /* lineOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lineOrderViewController.h; sourceTree = "<group>"; };
+		84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lineOrderViewController.m; sourceTree = "<group>"; };
+		84BDCD1F1BCB9C60009EF3EF /* twoLineOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twoLineOrderViewController.h; sourceTree = "<group>"; };
+		84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twoLineOrderViewController.m; sourceTree = "<group>"; };
 		84C73EDE1BAE644B00773C98 /* 造型.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "造型.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C73EE21BAE644B00773C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C73EE31BAE644B00773C98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -413,6 +422,12 @@
 				84BDCD181BCB915B009EF3EF /* mineViewController.m */,
 				793256371BC8EC1C0069FB69 /* goodOrderController.h */,
 				793256381BC8EC1C0069FB69 /* goodOrderController.m */,
+				84BDCD1B1BCB9C60009EF3EF /* lineOrderTableViewCell.h */,
+				84BDCD1C1BCB9C60009EF3EF /* lineOrderTableViewCell.m */,
+				84BDCD1D1BCB9C60009EF3EF /* lineOrderViewController.h */,
+				84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */,
+				84BDCD1F1BCB9C60009EF3EF /* twoLineOrderViewController.h */,
+				84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -535,11 +550,13 @@
 				79E5B9641BB525BC00491948 /* ECSlidingViewController.m in Sources */,
 				842194601BB69FD70046B2D3 /* HomewomenController.m in Sources */,
 				79E5B9631BB525BC00491948 /* ECSlidingSegue.m in Sources */,
+				84BDCD211BCB9C60009EF3EF /* lineOrderTableViewCell.m in Sources */,
 				790176761BB6927600D14045 /* LoginViewController.m in Sources */,
 				79EB60DF1BBA5F89000808B9 /* goodsViewController.m in Sources */,
 				84A630831BB15F5600A53BFD /* storageMgr.m in Sources */,
 				84C9D1791BC7E1D0001EEF56 /* ABCIntroView.m in Sources */,
 				84A630841BB15F5600A53BFD /* Utilities.m in Sources */,
+				84BDCD231BCB9C60009EF3EF /* twoLineOrderViewController.m in Sources */,
 				8421945D1BB699820046B2D3 /* ForgetViewController.m in Sources */,
 				842194661BB6A0AA0046B2D3 /* storeViewController.m in Sources */,
 				849E454C1BC8D6DB00AE4A2B /* rderViewController.m in Sources */,
@@ -553,6 +570,7 @@
 				793256441BC91E8B0069FB69 /* SVProgressHUD.m in Sources */,
 				8421945A1BB698930046B2D3 /* SignupViewController.m in Sources */,
 				84BDCD1A1BCB915B009EF3EF /* mineViewController.m in Sources */,
+				84BDCD221BCB9C60009EF3EF /* lineOrderViewController.m in Sources */,
 				84C9D16E1BC7DDD6001EEF56 /* ClickTableViewCell.m in Sources */,
 				793256451BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m in Sources */,
 				7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */,
