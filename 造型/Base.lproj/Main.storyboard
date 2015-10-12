@@ -752,7 +752,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gEd-uU-KJk" kind="show" id="mch-0t-c4f"/>
+                                    <action selector="shezhi:forEvent:" destination="19y-rt-EEM" eventType="touchUpInside" id="Ods-o5-RYD"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="图标D.png" translatesAutoresizingMaskIntoConstraints="NO" id="hO9-dt-na9">
@@ -879,7 +879,7 @@
         <!--Mine View Controller-->
         <scene sceneID="r7L-Y5-BWb">
             <objects>
-                <viewController id="9dw-eF-XgQ" customClass="mineViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ihhh" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9dw-eF-XgQ" customClass="mineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="obw-j8-5Ap"/>
                         <viewControllerLayoutGuide type="bottom" id="iGh-AE-DUL"/>
@@ -1007,7 +1007,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3154.5" y="1144.5"/>
+            <point key="canvasLocation" x="3799.5" y="1125.5"/>
         </scene>
         <!--店铺-->
         <scene sceneID="U8G-ph-75J">
@@ -1342,6 +1342,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <connections>
+                                <action selector="fanghui:" destination="ngn-Qj-VRQ" id="QrM-qd-RjZ"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="vQW-u7-eHg">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U8H-xW-bA1">
@@ -1351,6 +1354,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <connections>
+                                <segue destination="mdz-oj-aFc" kind="show" id="MfN-lg-IYl"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -2420,26 +2426,6 @@
             <point key="canvasLocation" x="4286.5" y="5182.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="V5v-k7-YXn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gEd-uU-KJk" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="DQ1-fH-GHW"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="opY-GC-vvX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9dw-eF-XgQ" kind="relationship" relationship="rootViewController" id="5qb-fd-Bha"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0kF-eX-rxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2705.5" y="1144.5"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="nNa-o8-1eo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pg1-4t-FuZ" sceneMemberID="viewController">
@@ -2476,6 +2462,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hn-n4-nxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3812.5" y="5346.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ghx-kZ-zjr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0U1-uW-RLf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rNB-Sm-bNi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9dw-eF-XgQ" kind="relationship" relationship="rootViewController" id="mIt-Lw-cog"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXM-Dl-OQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3243.5" y="1125.5"/>
         </scene>
     </scenes>
     <resources>

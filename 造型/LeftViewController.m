@@ -19,6 +19,7 @@
 - (IBAction)tuichu:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)chuping:(UITapGestureRecognizer *)sender;
 - (IBAction)dingdan:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)shezhi:(UIButton *)sender forEvent:(UIEvent *)event;
 
 
 
@@ -109,7 +110,10 @@
 }
 
 - (IBAction)dingdan:(UIButton *)sender forEvent:(UIEvent *)event
-{  NSLog(@"dddddddddddddddddddddddddd");
+{
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+    NSLog(@"dddddddddddddddddddddddddd");
     LeftViewController *dingdan = [self.storyboard instantiateViewControllerWithIdentifier:@"Iddd"];
     if (!hidden) {
         //初始化导航控制器
@@ -121,7 +125,49 @@
         //类似那个箭头 跳转到第二个界面
         //[self presentViewController:nc animated:YES completion:nil];
         [self presentViewController:nc animated:YES completion:nil];
+  }
+    }
+    else
+    {
+        [self showAlert];
     }
 
 }
+
+- (IBAction)shezhi:(UIButton *)sender forEvent:(UIEvent *)event
+{
+   
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        NSLog(@"hhhhhhhhhhhhhhhhhhhhh");
+        LeftViewController *shezhi = [self.storyboard instantiateViewControllerWithIdentifier:@"Ihhh"];
+        if (!hidden) {
+            //初始化导航控制器
+            UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:shezhi];
+            //动画效果
+            nc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+            //导航条隐藏掉
+            nc.navigationBarHidden = NO;
+            //类似那个箭头 跳转到第二个界面
+            //[self presentViewController:nc animated:YES completion:nil];
+            [self presentViewController:nc animated:YES completion:nil];
+        }
+    }
+    else
+    {
+        [self showAlert];
+    }
+}
+- (void)timerFireMethod:(NSTimer*)theTimer//弹出框
+{
+    UIAlertView *Alert = (UIAlertView*)[theTimer userInfo];
+    [Alert dismissWithClickedButtonIndex:0 animated:NO];
+    Alert =NULL;
+}
+- (void)showAlert{//时间
+    UIAlertView *Alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"请登录账号或注册账号"  delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(timerFireMethod:) userInfo:Alert repeats:YES];
+    [Alert show];
+}
+
 @end
