@@ -162,6 +162,8 @@
 }
 
 - (IBAction)collection:(UIButton *)sender forEvent:(UIEvent *)event {
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
     LeftViewController*dingdan = [self.storyboard instantiateViewControllerWithIdentifier:@"Lib"];
     //初始化导航控制器
     UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:dingdan];
@@ -182,6 +184,10 @@
     dingdan.navigationItem.leftBarButtonItem = favoBarButton;
     
     [self presentViewController:nc animated:YES completion:nil];
+    }else
+    {
+        [self showAlert];
+    }
     
 }
 

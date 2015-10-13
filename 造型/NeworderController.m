@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"X-bj"]];
     _name.text =_like[@"productName"];
     _timeLi.text =_like[@"producttime"];
     _price.text =_like[@"productPrice"];

@@ -25,6 +25,7 @@
     [self requestData];
 
     [self queryimg];
+     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"X-bj"]];
 }
 -(void)queryimg
 {

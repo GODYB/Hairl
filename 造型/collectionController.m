@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
 //    [self requestData];
     [self uiConfiguration];
+     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"X-bj"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,7 +123,7 @@
                 reuseIdentifier:TableSampleIdentifier];
     }
     
-    
+   
     
     PFObject *object = [_objectsForShow objectAtIndex:indexPath.row];
     PFObject *activity = object[@"youUser"];

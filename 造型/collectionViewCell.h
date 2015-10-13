@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *Newphoto;
 @property (weak, nonatomic) IBOutlet UILabel *Newtime;
 @property (weak, nonatomic) IBOutlet UILabel *Newaddress;
+@property (weak, nonatomic) IBOutlet UIImageView *TBone;
+@property (weak, nonatomic) IBOutlet UIImageView *TBtwo;
 
 @end

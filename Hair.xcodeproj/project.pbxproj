@@ -315,6 +315,35 @@
 			name = "订单详情";
 			sourceTree = "<group>";
 		};
+		79EF34D41BCD353E00069062 /* 查看收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				79EF34C11BCCA85600069062 /* collectionController.h */,
+				79EF34C21BCCA85600069062 /* collectionController.m */,
+				79EF34C41BCCA87A00069062 /* collectionViewCell.h */,
+				79EF34C51BCCA87A00069062 /* collectionViewCell.m */,
+			);
+			name = "查看收藏";
+			sourceTree = "<group>";
+		};
+		79EF34D51BCD384C00069062 /* 收藏详情 */ = {
+			isa = PBXGroup;
+			children = (
+				79EF34C71BCCC97C00069062 /* pageViewController.h */,
+				79EF34C81BCCC97C00069062 /* pageViewController.m */,
+			);
+			name = "收藏详情";
+			sourceTree = "<group>";
+		};
+		79EF34D61BCD38E100069062 /* 收藏下单 */ = {
+			isa = PBXGroup;
+			children = (
+				79EF34CD1BCCD7E900069062 /* NeworderController.h */,
+				79EF34CE1BCCD7E900069062 /* NeworderController.m */,
+			);
+			name = "收藏下单";
+			sourceTree = "<group>";
+		};
 		84A6307D1BB15F1900A53BFD /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,9 +474,12 @@
 		84F880111BAF9209007F2495 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				79EF34D61BCD38E100069062 /* 收藏下单 */,
+				79EF34D41BCD353E00069062 /* 查看收藏 */,
 				79EF34D31BCD30A100069062 /* 订单详情 */,
 				79EF34D21BCD2E6B00069062 /* 查看订单 */,
 				79EF34D11BCD2CE300069062 /* 悬赏详情 */,
+				79EF34D51BCD384C00069062 /* 收藏详情 */,
 				79EF34D01BCD153E00069062 /* 查看悬赏 */,
 				84DC343E1BB91EE3004BF93A /* LeftViewController.h */,
 				84DC343F1BB91EE3004BF93A /* LeftViewController.m */,
@@ -487,14 +519,6 @@
 				84BDCD181BCB915B009EF3EF /* mineViewController.m */,
 				793256371BC8EC1C0069FB69 /* goodOrderController.h */,
 				793256381BC8EC1C0069FB69 /* goodOrderController.m */,
-				79EF34C11BCCA85600069062 /* collectionController.h */,
-				79EF34C21BCCA85600069062 /* collectionController.m */,
-				79EF34C41BCCA87A00069062 /* collectionViewCell.h */,
-				79EF34C51BCCA87A00069062 /* collectionViewCell.m */,
-				79EF34C71BCCC97C00069062 /* pageViewController.h */,
-				79EF34C81BCCC97C00069062 /* pageViewController.m */,
-				79EF34CD1BCCD7E900069062 /* NeworderController.h */,
-				79EF34CE1BCCD7E900069062 /* NeworderController.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
