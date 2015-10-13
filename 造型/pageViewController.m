@@ -12,7 +12,8 @@
 {
     BOOL _isButtion;
 }
-- (IBAction)Focus:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)Newdelete:(UIBarButtonItem *)sender;
+
 
 @end
 
@@ -22,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self requestData];
-    [self focusData];
+
     [self queryimg];
 }
 -(void)queryimg
@@ -145,116 +146,11 @@
 }
 */
 
-- (IBAction)Focus:(UIButton *)sender forEvent:(UIEvent *)event {PFUser *user = [PFUser currentUser];
-    if(!user){
-        [self showAlert];
-        
-    }else
-    {
-        
-        if(_isButtion == YES){
-            _isButtion = NO;
-            [_collection setBackgroundImage:[UIImage imageNamed:@"AN-8"] forState:UIControlStateNormal];
-            
-            [self quxiaoData];
-            
-            
-        }else if(_isButtion == NO) {
-            _isButtion = YES;
-            [_collection setBackgroundImage:[UIImage imageNamed:@"AN-7"] forState:UIControlStateNormal];
-            PFObject *praise = [PFObject objectWithClassName:@"collection"];
-            praise[@"youUser"] = _item;
-            praise[@"meUser"] = user;
-            praise[@"shoucang"]=@"收藏";
-            
-            [praise saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                
-                if (succeeded){
-                    NSLog(@"Object Uploaded!");
-                    [self focusData];
-                }
-                else{
-                    NSLog(@"error=%@",error);
-                }
-                
-            }];
-            NSLog(@" 收藏==  %@",praise[@"shoucang"]);
-            
-            
-        }
-    }
 
-    
-    
-}
 
--(void)focusData
-{
-    PFUser *current=[PFUser currentUser];
-    
-    NSPredicate *predicate3 = [NSPredicate predicateWithFormat:@" youUser == %@ AND meUser == %@",_item, current];
-    PFQuery *query3 = [PFQuery queryWithClassName:@"collection" predicate:predicate3];
-    NSLog(@" query3  == %@ ",query3);
-    
-    [query3 countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
-        if (!error) {
-            if (number == 0) {
-                _isButtion = YES;
-                [_collection setBackgroundImage:[UIImage imageNamed:@"AN-8"] forState:UIControlStateNormal];
-            } else {
-                
-                _isButtion = NO;
-                [_collection setBackgroundImage:[UIImage imageNamed:@"AN-7"] forState:UIControlStateNormal];
-            }
-        }
-        else{
-            NSLog(@"error=%@",error);
-        }
-        
-    }];
-}
 
--(void)quxiaoData
-{
-    PFUser *current=[PFUser currentUser];
-    
-    NSPredicate *predicate3 = [NSPredicate predicateWithFormat:@" youUser == %@ AND meUser == %@",_item, current];
-    PFQuery *query3 = [PFQuery queryWithClassName:@"collection" predicate:predicate3];
-    NSLog(@" query3  == %@ ",query3);
-    
-    [query3 countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
-        if (!error) {
-            if (!number == 0) {
-                PFUser *current=[PFUser currentUser];
-                
-                NSPredicate *predicate3 = [NSPredicate predicateWithFormat:@" youUser == %@ AND meUser == %@",_item, current];
-                
-                
-                PFQuery *query4 = [PFQuery queryWithClassName:@"collection" predicate:predicate3];
-                
-                [query4 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                    if (!error) {
-                        for (PFObject *quxiao in objects) {
-                            [quxiao deleteInBackground];
-                        }
-                    }
-                }];
-                
-                
-                
-                
-                
-            }
-        }
-        else{
-            NSLog(@"error=%@",error);
-        }
-        
-    }];
-    
-    
-    
-}
+
+
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -272,6 +168,20 @@
 
     
 }
+- (IBAction)Newdelete:(UIBarButtonItem *)sender {
+    PFUser *user =[PFUser currentUser];
+    if(!user){
+        [self showAlert];
+        
+    }
+    [_item deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [Utilities popUpAlertViewWithMsg:@"取消收藏成功" andTitle:nil];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }];
+}
+
 - (void)timerFireMethod:(NSTimer*)theTimer//弹出框
 {
     UIAlertView *Alert = (UIAlertView*)[theTimer userInfo];
@@ -283,4 +193,5 @@
     [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(timerFireMethod:) userInfo:Alert repeats:YES];
     [Alert show];
 }
+
 @end

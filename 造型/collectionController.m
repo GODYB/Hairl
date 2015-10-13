@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self requestData];
+//    [self requestData];
     [self uiConfiguration];
 }
 
@@ -26,7 +26,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];//视图出现之前做的事情
+    [self requestData];
+    
+}
 -(void)uiConfiguration
 {
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -50,7 +55,14 @@
     refreshControl.backgroundColor = [UIColor groupTableViewBackgroundColor];
     //执行的动作
     [refreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
+    
+//    //背景色 浅灰色
+//    refreshControl.backgroundColor = [UIColor groupTableViewBackgroundColor];
+//    //执行的动作
+//    refreshControl.tag = 8001;
+//    [refreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
     [_Newtable addSubview:refreshControl];
+//        [_Newtable reloadData];
 }
 
 - (void)refreshData:(UIRefreshControl *)rc
@@ -82,6 +94,9 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *returnedObjects, NSError *error) {
         [SVProgressHUD dismiss];
         
+        
+//        UIRefreshControl *rc = (UIRefreshControl *)[_Newtable viewWithTag:8001];
+//        [rc endRefreshing];
         if (!error) {
             _objectsForShow = returnedObjects;
             NSLog(@"_objectsForShow = %@", _objectsForShow);

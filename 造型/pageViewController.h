@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *Newtablew;
 
 @property(strong,nonatomic)NSArray*objectsForShow;
-@property (weak, nonatomic) IBOutlet UIButton *collection;
+
 
 @property (strong, nonatomic) PFObject *item;
 @end

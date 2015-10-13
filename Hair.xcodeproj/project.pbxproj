@@ -275,6 +275,17 @@
 			name = ECSlidingViewController;
 			sourceTree = "<group>";
 		};
+		79EF34D01BCD153E00069062 /* 查看悬赏 */ = {
+			isa = PBXGroup;
+			children = (
+				84BDCD1B1BCB9C60009EF3EF /* lineOrderTableViewCell.h */,
+				84BDCD1C1BCB9C60009EF3EF /* lineOrderTableViewCell.m */,
+				84BDCD1D1BCB9C60009EF3EF /* lineOrderViewController.h */,
+				84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */,
+			);
+			name = "查看悬赏";
+			sourceTree = "<group>";
+		};
 		84A6307D1BB15F1900A53BFD /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +416,7 @@
 		84F880111BAF9209007F2495 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				79EF34D01BCD153E00069062 /* 查看悬赏 */,
 				84DC343E1BB91EE3004BF93A /* LeftViewController.h */,
 				84DC343F1BB91EE3004BF93A /* LeftViewController.m */,
 				842194641BB6A0AA0046B2D3 /* storeViewController.h */,
@@ -443,10 +455,6 @@
 				84BDCD181BCB915B009EF3EF /* mineViewController.m */,
 				793256371BC8EC1C0069FB69 /* goodOrderController.h */,
 				793256381BC8EC1C0069FB69 /* goodOrderController.m */,
-				84BDCD1B1BCB9C60009EF3EF /* lineOrderTableViewCell.h */,
-				84BDCD1C1BCB9C60009EF3EF /* lineOrderTableViewCell.m */,
-				84BDCD1D1BCB9C60009EF3EF /* lineOrderViewController.h */,
-				84BDCD1E1BCB9C60009EF3EF /* lineOrderViewController.m */,
 				84BDCD1F1BCB9C60009EF3EF /* twoLineOrderViewController.h */,
 				84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */,
 				84BDCD331BCBB3CC009EF3EF /* orderTableViewCell.h */,
