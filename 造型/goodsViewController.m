@@ -9,7 +9,11 @@
 #import "goodsViewController.h"
 #import  "uploadViewController.h"
 @interface goodsViewController ()
+{
+     BOOL _isButtion;
+}
 
+- (IBAction)Focus:(UIButton *)sender forEvent:(UIEvent *)event;
 
 @end
 
@@ -19,7 +23,7 @@
     [super viewDidLoad];
 //    _tableViewtwo.hidden=YES;
     [self requestData];
-    
+    [self focusData];
     PFFile *photo = _item[@"businessPhoto"];
     [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
         if (!error) {
@@ -138,6 +142,126 @@
 //
 //  
 //}
+
+
+- (IBAction)Focus:(UIButton *)sender forEvent:(UIEvent *)event {
+    PFUser *user = [PFUser currentUser];
+    if(!user){
+        [self showAlert];
+        
+    }else
+    {
+        
+        if(_isButtion == YES){
+            _isButtion = NO;
+            [_collection setBackgroundImage:[UIImage imageNamed:@"AN-8"] forState:UIControlStateNormal];
+            
+            [self quxiaoData];
+            
+            
+        }else if(_isButtion == NO) {
+            _isButtion = YES;
+            [_collection setBackgroundImage:[UIImage imageNamed:@"AN-7"] forState:UIControlStateNormal];
+            PFObject *praise = [PFObject objectWithClassName:@"collection"];
+            praise[@"youUser"] = _item;
+            praise[@"meUser"] = user;
+            praise[@"shoucang"]=@"收藏";
+            
+            [praise saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                
+                if (succeeded){
+                    NSLog(@"Object Uploaded!");
+                    [self focusData];
+                }
+                else{
+                    NSLog(@"error=%@",error);
+                }
+                
+            }];
+            NSLog(@" 收藏==  %@",praise[@"shoucang"]);
+            
+            
+        }
+    }
+}
+
+-(void)focusData
+{
+    PFUser *current=[PFUser currentUser];
+    
+    NSPredicate *predicate3 = [NSPredicate predicateWithFormat:@" youUser == %@ AND meUser == %@",_item, current];
+    PFQuery *query3 = [PFQuery queryWithClassName:@"collection" predicate:predicate3];
+    NSLog(@" query3  == %@ ",query3);
+    
+    [query3 countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+        if (!error) {
+            if (number == 0) {
+                [_collection setBackgroundImage:[UIImage imageNamed:@"AN-8"] forState:UIControlStateNormal];
+            } else {
+                [_collection setBackgroundImage:[UIImage imageNamed:@"AN-7"] forState:UIControlStateNormal];
+            }
+        }
+        else{
+            NSLog(@"error=%@",error);
+        }
+        
+    }];
+}
+
+-(void)quxiaoData
+{
+    PFUser *current=[PFUser currentUser];
+    
+    NSPredicate *predicate3 = [NSPredicate predicateWithFormat:@" youUser == %@ AND meUser == %@",_item, current];
+    PFQuery *query3 = [PFQuery queryWithClassName:@"collection" predicate:predicate3];
+    NSLog(@" query3  == %@ ",query3);
+    
+    [query3 countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+        if (!error) {
+            if (!number == 0) {
+                PFUser *current=[PFUser currentUser];
+                
+                NSPredicate *predicate3 = [NSPredicate predicateWithFormat:@" youUser == %@ AND meUser == %@",_item, current];
+                
+                
+                PFQuery *query4 = [PFQuery queryWithClassName:@"collection" predicate:predicate3];
+                
+                [query4 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                    if (!error) {
+                        for (PFObject *quxiao in objects) {
+                            [quxiao deleteInBackground];
+                        }
+                    }
+                }];
+                
+                
+                
+                
+                
+            }
+        }
+        else{
+            NSLog(@"error=%@",error);
+        }
+        
+    }];
+    
+    
+    
+}
+
+
+- (void)timerFireMethod:(NSTimer*)theTimer//弹出框
+{
+    UIAlertView *Alert = (UIAlertView*)[theTimer userInfo];
+    [Alert dismissWithClickedButtonIndex:0 animated:NO];
+    Alert =NULL;
+}
+- (void)showAlert{//时间
+    UIAlertView *Alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"请登录账号或注册账号"  delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(timerFireMethod:) userInfo:Alert repeats:YES];
+    [Alert show];
+}
 
 
 @end
