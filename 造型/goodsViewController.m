@@ -196,8 +196,10 @@
     [query3 countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
         if (!error) {
             if (number == 0) {
+                _isButtion = NO;
                 [_collection setBackgroundImage:[UIImage imageNamed:@"AN-8"] forState:UIControlStateNormal];
             } else {
+                _isButtion = YES;
                 [_collection setBackgroundImage:[UIImage imageNamed:@"AN-7"] forState:UIControlStateNormal];
             }
         }
