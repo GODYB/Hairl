@@ -23,6 +23,8 @@
 		79E5B9651BB525BC00491948 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E5B95F1BB525BC00491948 /* UIViewController+ECSlidingViewController.m */; };
 		79EB60DC1BBA3DCD000808B9 /* AllTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EB60DB1BBA3DCD000808B9 /* AllTableViewCell.m */; };
 		79EB60DF1BBA5F89000808B9 /* goodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EB60DE1BBA5F89000808B9 /* goodsViewController.m */; };
+		79EF34C31BCCA85600069062 /* collectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EF34C21BCCA85600069062 /* collectionController.m */; };
+		79EF34C61BCCA87A00069062 /* collectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EF34C51BCCA87A00069062 /* collectionViewCell.m */; };
 		79EFE9F71BC6248F0033D415 /* uploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EFE9F61BC6248F0033D415 /* uploadViewController.m */; };
 		8414DC5B1BAFD2EF00D290F9 /* 头像.png in Resources */ = {isa = PBXBuildFile; fileRef = 8414DC551BAFD2EF00D290F9 /* 头像.png */; };
 		8414DC5C1BAFD2EF00D290F9 /* 图标A.png in Resources */ = {isa = PBXBuildFile; fileRef = 8414DC561BAFD2EF00D290F9 /* 图标A.png */; };
@@ -116,6 +118,10 @@
 		79EB60DB1BBA3DCD000808B9 /* AllTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewCell.m; sourceTree = "<group>"; };
 		79EB60DD1BBA5F89000808B9 /* goodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goodsViewController.h; sourceTree = "<group>"; };
 		79EB60DE1BBA5F89000808B9 /* goodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goodsViewController.m; sourceTree = "<group>"; };
+		79EF34C11BCCA85600069062 /* collectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionController.h; sourceTree = "<group>"; };
+		79EF34C21BCCA85600069062 /* collectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionController.m; sourceTree = "<group>"; };
+		79EF34C41BCCA87A00069062 /* collectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionViewCell.h; sourceTree = "<group>"; };
+		79EF34C51BCCA87A00069062 /* collectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionViewCell.m; sourceTree = "<group>"; };
 		79EFE9F51BC6248F0033D415 /* uploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uploadViewController.h; sourceTree = "<group>"; };
 		79EFE9F61BC6248F0033D415 /* uploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uploadViewController.m; sourceTree = "<group>"; };
 		8414DC551BAFD2EF00D290F9 /* 头像.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像.png"; sourceTree = "<group>"; };
@@ -443,6 +449,10 @@
 				84BDCD361BCBB3CC009EF3EF /* orderViewController.m */,
 				84BDCD3C1BCBCB00009EF3EF /* TwoOrderViewController.h */,
 				84BDCD3D1BCBCB00009EF3EF /* TwoOrderViewController.m */,
+				79EF34C11BCCA85600069062 /* collectionController.h */,
+				79EF34C21BCCA85600069062 /* collectionController.m */,
+				79EF34C41BCCA87A00069062 /* collectionViewCell.h */,
+				79EF34C51BCCA87A00069062 /* collectionViewCell.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -573,6 +583,7 @@
 				84C9D1791BC7E1D0001EEF56 /* ABCIntroView.m in Sources */,
 				84A630841BB15F5600A53BFD /* Utilities.m in Sources */,
 				84BDCD231BCB9C60009EF3EF /* twoLineOrderViewController.m in Sources */,
+				79EF34C61BCCA87A00069062 /* collectionViewCell.m in Sources */,
 				8421945D1BB699820046B2D3 /* ForgetViewController.m in Sources */,
 				842194661BB6A0AA0046B2D3 /* storeViewController.m in Sources */,
 				84BDCD3E1BCBCB00009EF3EF /* TwoOrderViewController.m in Sources */,
@@ -592,6 +603,7 @@
 				793256451BC91E8B0069FB69 /* SVIndefiniteAnimatedView.m in Sources */,
 				7901767C1BB69CEB00D14045 /* TabViewController.m in Sources */,
 				84C73EE41BAE644B00773C98 /* main.m in Sources */,
+				79EF34C31BCCA85600069062 /* collectionController.m in Sources */,
 				793256391BC8EC1C0069FB69 /* goodOrderController.m in Sources */,
 				79E5B9601BB525BC00491948 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				79EB60DC1BBA3DCD000808B9 /* AllTableViewCell.m in Sources */,

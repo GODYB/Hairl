@@ -20,6 +20,7 @@
 - (IBAction)chuping:(UITapGestureRecognizer *)sender;
 - (IBAction)dingdan:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)shezhi:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)collection:(UIButton *)sender forEvent:(UIEvent *)event;
 
 
 
@@ -157,6 +158,20 @@
     {
         [self showAlert];
     }
+}
+
+- (IBAction)collection:(UIButton *)sender forEvent:(UIEvent *)event {
+    LeftViewController*dingdan = [self.storyboard instantiateViewControllerWithIdentifier:@"Lib"];
+    //初始化导航控制器
+    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:dingdan];
+    //动画效果
+    nc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    //导航条隐藏掉
+    nc.navigationBarHidden = NO;
+    //类似那个箭头 跳转到第二个界面
+    //[self presentViewController:nc animated:YES completion:nil];
+    [self presentViewController:nc animated:YES completion:nil];
+    
 }
 - (void)timerFireMethod:(NSTimer*)theTimer//弹出框
 {
