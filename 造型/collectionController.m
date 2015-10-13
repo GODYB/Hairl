@@ -19,12 +19,53 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self requestData];
+    [self uiConfiguration];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)uiConfiguration
+{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    NSString *title = [NSString stringWithFormat:@"下拉即可刷新"];
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    [style setAlignment:NSTextAlignmentCenter];
+    [style setLineBreakMode:NSLineBreakByWordWrapping];
+    
+    NSDictionary *attrsDictionary = @{NSUnderlineStyleAttributeName:
+                                          @(NSUnderlineStyleNone),
+                                      NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody],
+                                      NSParagraphStyleAttributeName:style,
+                                      NSForegroundColorAttributeName:[UIColor brownColor]};
+    
+    
+    NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:attrsDictionary];
+    refreshControl.attributedTitle = attributedTitle;
+    //tintColor旋转的小花的颜色
+    refreshControl.tintColor = [UIColor brownColor];
+    //背景色 浅灰色
+    refreshControl.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    //执行的动作
+    [refreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
+    [_Newtable addSubview:refreshControl];
+}
+
+- (void)refreshData:(UIRefreshControl *)rc
+{
+    [_Newtable reloadData];
+    //怎么样让方法延迟执行的
+    [self performSelector:@selector(endRefreshing:) withObject:rc afterDelay:0.4f];
+}
+
+//下拉刷新闭合
+- (void)endRefreshing:(UIRefreshControl *)rc
+{
+    [rc endRefreshing];//闭合
+}
+
 - (void)requestData {
     
     PFUser *currentUser = [PFUser currentUser];
