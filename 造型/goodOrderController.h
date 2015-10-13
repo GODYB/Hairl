@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *Newmoney;
 @property (weak, nonatomic) IBOutlet UILabel *Newstore;
 @property (weak, nonatomic) IBOutlet UITextField *meitem;
+@property (weak, nonatomic) IBOutlet UIDatePicker *Likedata;
 
 @property (strong, nonatomic) PFObject *like;
 @property(strong,nonatomic)NSArray*objectsForShow;

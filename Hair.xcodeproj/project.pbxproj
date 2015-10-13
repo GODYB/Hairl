@@ -286,6 +286,35 @@
 			name = "查看悬赏";
 			sourceTree = "<group>";
 		};
+		79EF34D11BCD2CE300069062 /* 悬赏详情 */ = {
+			isa = PBXGroup;
+			children = (
+				84BDCD1F1BCB9C60009EF3EF /* twoLineOrderViewController.h */,
+				84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */,
+			);
+			name = "悬赏详情";
+			sourceTree = "<group>";
+		};
+		79EF34D21BCD2E6B00069062 /* 查看订单 */ = {
+			isa = PBXGroup;
+			children = (
+				84BDCD331BCBB3CC009EF3EF /* orderTableViewCell.h */,
+				84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */,
+				84E2A6091BCCFD090044886D /* orderViewController.h */,
+				84E2A60A1BCCFD090044886D /* orderViewController.m */,
+			);
+			name = "查看订单";
+			sourceTree = "<group>";
+		};
+		79EF34D31BCD30A100069062 /* 订单详情 */ = {
+			isa = PBXGroup;
+			children = (
+				84BDCD3C1BCBCB00009EF3EF /* TwoOrderViewController.h */,
+				84BDCD3D1BCBCB00009EF3EF /* TwoOrderViewController.m */,
+			);
+			name = "订单详情";
+			sourceTree = "<group>";
+		};
 		84A6307D1BB15F1900A53BFD /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +445,9 @@
 		84F880111BAF9209007F2495 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				79EF34D31BCD30A100069062 /* 订单详情 */,
+				79EF34D21BCD2E6B00069062 /* 查看订单 */,
+				79EF34D11BCD2CE300069062 /* 悬赏详情 */,
 				79EF34D01BCD153E00069062 /* 查看悬赏 */,
 				84DC343E1BB91EE3004BF93A /* LeftViewController.h */,
 				84DC343F1BB91EE3004BF93A /* LeftViewController.m */,
@@ -455,14 +487,6 @@
 				84BDCD181BCB915B009EF3EF /* mineViewController.m */,
 				793256371BC8EC1C0069FB69 /* goodOrderController.h */,
 				793256381BC8EC1C0069FB69 /* goodOrderController.m */,
-				84BDCD1F1BCB9C60009EF3EF /* twoLineOrderViewController.h */,
-				84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */,
-				84BDCD331BCBB3CC009EF3EF /* orderTableViewCell.h */,
-				84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */,
-				84E2A6091BCCFD090044886D /* orderViewController.h */,
-				84E2A60A1BCCFD090044886D /* orderViewController.m */,
-				84BDCD3C1BCBCB00009EF3EF /* TwoOrderViewController.h */,
-				84BDCD3D1BCBCB00009EF3EF /* TwoOrderViewController.m */,
 				79EF34C11BCCA85600069062 /* collectionController.h */,
 				79EF34C21BCCA85600069062 /* collectionController.m */,
 				79EF34C41BCCA87A00069062 /* collectionViewCell.h */,

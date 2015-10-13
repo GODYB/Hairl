@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"X-bj"]];
     NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
     [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];//设定时间格式
     NSString *dateString = [dateFormat stringFromDate:_orderitem[@"orderDate"]]; //求出当天的时间字符串，当更改时间格式时，时间字符串也能随之改变
@@ -25,6 +25,7 @@
     _orderPice.text = [NSString stringWithFormat:@"%@",_orderitem[@"orderPrice"]];
     _shuoming.text = [NSString stringWithFormat:@"%@",_orderitem[@"orderState"]];
     _ordertime.text = [NSString stringWithFormat:@"%@",dateString];
+    
     
 
 }

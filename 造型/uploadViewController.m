@@ -102,8 +102,7 @@
         return;
         
     }
-    UIAlertView *confirmView = [[UIAlertView alloc]initWithTitle:@"是否确认您的订单" message:@"并返回主页" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    [confirmView show];
+    [self uploadSten];
     
 }
 
@@ -133,6 +132,9 @@
 - (void) uploadSten
 {
     
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd hh:mm a"];
     
@@ -165,6 +167,8 @@
          if (succeeded) {
 
              [self dismissViewControllerAnimated:YES completion:nil];
+             UIAlertView *confirmView = [[UIAlertView alloc]initWithTitle:@"是否确认您的订单" message:@"并返回主页" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+             [confirmView show];
              //返回首页 返回上一页
              //[self.navigationController popViewControllerAnimated:YES];//返回上个页面
           
@@ -174,11 +178,24 @@
          }
          
      }];
-    
+    } else
+    {
+        [self showAlert];
+    }
 }
 
 
-
+- (void)timerFireMethod:(NSTimer*)theTimer//弹出框
+{
+    UIAlertView *Alert = (UIAlertView*)[theTimer userInfo];
+    [Alert dismissWithClickedButtonIndex:0 animated:NO];
+    Alert =NULL;
+}
+- (void)showAlert{//时间
+    UIAlertView *Alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"请登录账号或注册账号"  delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(timerFireMethod:) userInfo:Alert repeats:YES];
+    [Alert show];
+}
 
 //UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, 30)]
 //textField.returnKeyType = UIReturnKeySearch; //设置按键类型

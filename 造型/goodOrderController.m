@@ -23,6 +23,7 @@
     
   _Newpackage.text =_like[@"productName"];
     _Newmoney.text=_like[@"productPrice"];
+      _Likedata.minimumDate = [NSDate date];
     [self requestData];
 }
 

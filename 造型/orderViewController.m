@@ -21,6 +21,7 @@
     //到Parserq去读取数据
     [self requestData];
     [self uiConfiguration];
+     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"X-bj"]];
 }
 -(void)uiConfiguration
 {
