@@ -1117,7 +1117,7 @@
         <!--悬赏-->
         <scene sceneID="S9c-hz-T7s">
             <objects>
-                <viewController id="vhy-li-51l" customClass="MyRewardViewViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Iccc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vhy-li-51l" customClass="MyRewardViewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="grY-DF-ldx"/>
                         <viewControllerLayoutGuide type="bottom" id="udU-HH-eIK"/>
@@ -1140,12 +1140,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="悬赏" id="QaT-it-Jff"/>
+                    <navigationItem key="navigationItem" title="悬赏" id="QaT-it-Jff">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="6Uh-dg-Z5j">
+                            <connections>
+                                <action selector="fanghui:" destination="vhy-li-51l" id="rpQ-26-bgj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xld-iK-rAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638.5" y="3643.5"/>
+            <point key="canvasLocation" x="2753.5" y="3643.5"/>
         </scene>
         <!--发布悬赏-->
         <scene sceneID="D1Z-Le-by4">

@@ -242,7 +242,7 @@
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         NSLog(@"dddddddddddddddddddddddddd");
-        rewardViewController *dingdan = [self.storyboard instantiateViewControllerWithIdentifier:@"Iddd"];
+        rewardViewController *dingdan = [self.storyboard instantiateViewControllerWithIdentifier:@"Iccc"];
         if (!hidden) {
             //初始化导航控制器
             UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:dingdan];

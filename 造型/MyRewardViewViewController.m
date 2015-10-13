@@ -9,6 +9,7 @@
 #import "MyRewardViewViewController.h"
 #import "ABCIntroView/ABCIntroView.h"
 @interface MyRewardViewViewController ()<ABCIntroViewDelegate>
+- (IBAction)fanghui:(UIBarButtonItem *)sender;
 @property ABCIntroView *introView;
 @end
 
@@ -53,4 +54,8 @@
 }
 */
 
+- (IBAction)fanghui:(UIBarButtonItem *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
