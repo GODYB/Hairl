@@ -23,6 +23,10 @@
     // Do any additional setup after loading the view.
     [self requestData];
     [self focusData];
+    [self queryimg];
+}
+-(void)queryimg
+{
     NSLog(@"_item = %@", _item);
     PFObject *user = _item[@"youUser"];
     PFFile *photo = user[@"businessPhoto"];
@@ -38,6 +42,56 @@
     _Newitme.text =user[@"businesshours"];
     _Newaddress.text=user[@"address"];
 }
+- (UIImage *)imageUrl:(NSString *)url {
+    if (nil == url || url.length == 0) {
+        return nil;
+    }
+    static dispatch_queue_t backgroundQueue;
+    if (backgroundQueue == nil) {
+        backgroundQueue = dispatch_queue_create("com.beilyton.queue", NULL);
+    }
+    
+    NSArray *directories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [directories objectAtIndex:0];
+    __block NSString *filePath = nil;
+    filePath = [documentDirectory stringByAppendingPathComponent:[url lastPathComponent]];
+    UIImage *imageInFile = [UIImage imageWithContentsOfFile:filePath];
+    if (imageInFile) {
+        return imageInFile;
+    }
+    
+    __block NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    if (!data) {
+        NSLog(@"Error retrieving %@", url);
+        return nil;
+    }
+    UIImage *imageDownloaded = [[UIImage alloc] initWithData:data];
+    dispatch_async(backgroundQueue, ^(void) {
+        [data writeToFile:filePath atomically:YES];
+        NSLog(@"Wrote to: %@", filePath);
+    });
+    return imageDownloaded;
+}
+
+- (void)photoTapAtIndexPath:(NSIndexPath *)indexPath {
+   // PFObject *object = [_objectsForShow objectAtIndex:indexPath.row];
+    _zoomIv = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _zoomIv.userInteractionEnabled = YES;
+   // _zoomIv.image = [self imageUrl:object.imgUrl];
+    _zoomIv.image=_Newphoto.image;
+    _zoomIv.contentMode = UIViewContentModeScaleAspectFit;
+    _zoomIv.backgroundColor = [UIColor blackColor];
+    UITapGestureRecognizer *ivTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ivTap:)];
+    [_zoomIv addGestureRecognizer:ivTap];
+    [[[UIApplication sharedApplication] keyWindow] addSubview:_zoomIv];
+}
+- (void)ivTap:(UITapGestureRecognizer *)tap {
+    if (tap.state == UIGestureRecognizerStateRecognized) {
+        [_zoomIv removeFromSuperview];
+        _zoomIv = nil;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

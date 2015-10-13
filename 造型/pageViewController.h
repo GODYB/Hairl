@@ -11,6 +11,7 @@
 @interface pageViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *Newname;
 @property (weak, nonatomic) IBOutlet UIImageView *Newphoto;
+@property (strong, nonatomic) UIImageView *zoomIv;
 @property (weak, nonatomic) IBOutlet UILabel *Newitme;
 @property (weak, nonatomic) IBOutlet UILabel *Newaddress;
 @property (weak, nonatomic) IBOutlet UITableView *Newtablew;

@@ -71,6 +71,7 @@
 		84D13FCD1BB3D0800037EB03 /* 定位(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 84D13FCC1BB3D0800037EB03 /* 定位(1).png */; };
 		84D13FCF1BB3D08A0037EB03 /* 个人信息(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 84D13FCE1BB3D08A0037EB03 /* 个人信息(1).png */; };
 		84DC34401BB91EE3004BF93A /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC343F1BB91EE3004BF93A /* LeftViewController.m */; };
+		84E2A60B1BCCFD090044886D /* orderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2A60A1BCCFD090044886D /* orderViewController.m */; };
 		84F880311BAFAA9B007F2495 /* 定位.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F880301BAFAA9B007F2495 /* 定位.png */; };
 		84F880351BAFAAB6007F2495 /* 人物图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F880341BAFAAB6007F2495 /* 人物图标.png */; };
 /* End PBXBuildFile section */
@@ -200,6 +201,8 @@
 		84D13FCE1BB3D08A0037EB03 /* 个人信息(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人信息(1).png"; sourceTree = "<group>"; };
 		84DC343E1BB91EE3004BF93A /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		84DC343F1BB91EE3004BF93A /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		84E2A6091BCCFD090044886D /* orderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderViewController.h; sourceTree = "<group>"; };
+		84E2A60A1BCCFD090044886D /* orderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderViewController.m; sourceTree = "<group>"; };
 		84F880301BAFAA9B007F2495 /* 定位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位.png"; sourceTree = "<group>"; };
 		84F880341BAFAAB6007F2495 /* 人物图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物图标.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -448,6 +451,8 @@
 				84BDCD201BCB9C60009EF3EF /* twoLineOrderViewController.m */,
 				84BDCD331BCBB3CC009EF3EF /* orderTableViewCell.h */,
 				84BDCD341BCBB3CC009EF3EF /* orderTableViewCell.m */,
+				84E2A6091BCCFD090044886D /* orderViewController.h */,
+				84E2A60A1BCCFD090044886D /* orderViewController.m */,
 				84BDCD3C1BCBCB00009EF3EF /* TwoOrderViewController.h */,
 				84BDCD3D1BCBCB00009EF3EF /* TwoOrderViewController.m */,
 				79EF34C11BCCA85600069062 /* collectionController.h */,
@@ -579,6 +584,7 @@
 				79E5B9651BB525BC00491948 /* UIViewController+ECSlidingViewController.m in Sources */,
 				79E5B9641BB525BC00491948 /* ECSlidingViewController.m in Sources */,
 				842194601BB69FD70046B2D3 /* HomewomenController.m in Sources */,
+				84E2A60B1BCCFD090044886D /* orderViewController.m in Sources */,
 				79E5B9631BB525BC00491948 /* ECSlidingSegue.m in Sources */,
 				84BDCD211BCB9C60009EF3EF /* lineOrderTableViewCell.m in Sources */,
 				790176761BB6927600D14045 /* LoginViewController.m in Sources */,
