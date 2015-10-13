@@ -11,4 +11,5 @@
 @interface collectionController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *Newtable;
 @property(strong,nonatomic)NSArray*objectsForShow;
+
 @end

@@ -170,9 +170,24 @@
     nc.navigationBarHidden = NO;
     //类似那个箭头 跳转到第二个界面
     //[self presentViewController:nc animated:YES completion:nil];
+    UIButton *_Newreturn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _Newreturn.frame = CGRectMake(0, 0, 44, 44);
+    [_Newreturn setImage:[UIImage imageNamed:@"AN-1"] forState:UIControlStateNormal];
+    [_Newreturn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    //_Newreturn.backgroundColor = [UIColor redColor];
+    UIBarButtonItem *favoBarButton = [[UIBarButtonItem alloc] initWithCustomView:_Newreturn];
+    //  favoBarButton:[UIImage imaeNamed:@"AN-7"];
+    //           [self.favoBarButton setImage:[UIImage imageNamed:@"AN-7"] forState:UIControlStateNormal];
+    dingdan.navigationItem.leftBarButtonItem = favoBarButton;
+    
     [self presentViewController:nc animated:YES completion:nil];
     
 }
+
+- (void)back {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)timerFireMethod:(NSTimer*)theTimer//弹出框
 {
     UIAlertView *Alert = (UIAlertView*)[theTimer userInfo];

@@ -7,12 +7,13 @@
 //
 
 #import "collectionController.h"
-
+#import  "pageViewController.h"
 @interface collectionController ()
 
 @end
 
 @implementation collectionController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -89,6 +90,31 @@
     return cell;
     
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PFObject *object = [_objectsForShow objectAtIndex:indexPath.row];
+   pageViewController *pvc = [Utilities getStoryboardInstanceByIdentity:@"LDI"];
+    //    PFObject *par = object[@"owner"];
+    //    pvc.ownername = par;
+    pvc.item = object;
+    //    pvc.kro =object;
+    pvc.hidesBottomBarWhenPushed = YES;//把切换按钮隐藏掉
+    [self.navigationController pushViewController:pvc animated:YES];
+    
+    
+}
+
+//UIBarButtonItem *favoBarButton = [[UIBarButtonItem alloc] initWithCustomView:_favoBtn];
+
+//这是在UIBarButtonItem上客制化View的方法
+
+//如果需要在Bar Button Item上设置图片，可以用这个方法把它客制化成一个Button
+//self.navigationItem.rightBarButtonItems = @[favoBarButton, shareBarButton];
+
+//这是用代码的方式给导航条右边放置多个Bar Button Item的方法
+
 
 /*
 #pragma mark - Navigation
