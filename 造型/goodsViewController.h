@@ -23,5 +23,9 @@
 
 @property (strong, nonatomic) PFObject *item;
 @property (weak, nonatomic) IBOutlet UIButton *collection;
+@property (weak, nonatomic) IBOutlet UIImageView *TBone;
+@property (weak, nonatomic) IBOutlet UIImageView *TBtwo;
+
+
 
 @end

@@ -10,6 +10,7 @@
 
 @interface LeftViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *tuichu;
 
 @property (weak, nonatomic) IBOutlet UIImageView *Head;
 @property (weak, nonatomic) IBOutlet UILabel *lable1;

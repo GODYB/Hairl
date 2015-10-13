@@ -26,11 +26,11 @@
     _image.layer.cornerRadius = _image.bounds.size.width/2;
     _image.layer.masksToBounds = YES;
 
-    CALayer *layer = [_savebutton layer];
-    layer.cornerRadius = 40;//角的弧度
-    layer.borderColor = [[UIColor redColor]CGColor];
-    layer.borderWidth = 1;//边框宽度
-    layer.masksToBounds = YES;//图片填充边框
+//    CALayer *layer = [_savebutton layer];
+//    layer.cornerRadius = 40;//角的弧度
+//    layer.borderColor = [[UIColor redColor]CGColor];
+//    layer.borderWidth = 1;//边框宽度
+//    layer.masksToBounds = YES;//图片填充边框
     _objectviewshow=[[NSMutableArray alloc]initWithObjects:@"用户名",@"真实姓名",@"年龄",@"性别",@"邮箱",@"联系电话",@"代金券", nil];
     idedit = NO;
     _savebutton.hidden = YES;

@@ -61,9 +61,9 @@
     if (currentUser) {
         NSLog(@"Y");
        // _lable1.text = currentUser[@"realname"];
-        _lable1.text=[NSString stringWithFormat:@"姓名:   %@", currentUser[@"realname"]];
+        _lable1.text= Nil;
         _lable2.text=[NSString stringWithFormat:@"昵称:   %@", currentUser[@"username"]];
-        
+        _tuichu.hidden = NO;
         PFFile *photo = currentUser[@"photo"];
         [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
             if (!error) {
@@ -77,6 +77,7 @@
     }else{
          _Head.image = Nil;
         _lable2.text= Nil;
+        _tuichu.hidden = YES;
     }
 }
 - (IBAction)tuichu:(UIButton *)sender forEvent:(UIEvent *)event

@@ -48,9 +48,12 @@
    
     if ([[[storageMgr singletonStorageMgr] objectForKey:@"background"] integerValue] == 0) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BJ-1"]];
+        _TBone.image=[UIImage imageNamed:@"TB-6"];
+        _TBtwo.image=[UIImage imageNamed:@"TB-7"];
     } else {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BJ-2"]];
-        
+          _TBone.image=[UIImage imageNamed:@"TB-1"];
+          _TBtwo.image=[UIImage imageNamed:@"TB-2"];
     }
     [super viewWillAppear:animated];//视图出现之前做的事情
     
