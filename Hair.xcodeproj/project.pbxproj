@@ -344,6 +344,15 @@
 			name = "收藏下单";
 			sourceTree = "<group>";
 		};
+		842F6CCC1BCF2F0D008BEC49 /* 侧滑栏 */ = {
+			isa = PBXGroup;
+			children = (
+				84DC343E1BB91EE3004BF93A /* LeftViewController.h */,
+				84DC343F1BB91EE3004BF93A /* LeftViewController.m */,
+			);
+			name = "侧滑栏";
+			sourceTree = "<group>";
+		};
 		84A6307D1BB15F1900A53BFD /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +483,7 @@
 		84F880111BAF9209007F2495 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				842F6CCC1BCF2F0D008BEC49 /* 侧滑栏 */,
 				79EF34D61BCD38E100069062 /* 收藏下单 */,
 				79EF34D41BCD353E00069062 /* 查看收藏 */,
 				79EF34D31BCD30A100069062 /* 订单详情 */,
@@ -481,8 +491,6 @@
 				79EF34D11BCD2CE300069062 /* 悬赏详情 */,
 				79EF34D51BCD384C00069062 /* 收藏详情 */,
 				79EF34D01BCD153E00069062 /* 查看悬赏 */,
-				84DC343E1BB91EE3004BF93A /* LeftViewController.h */,
-				84DC343F1BB91EE3004BF93A /* LeftViewController.m */,
 				842194641BB6A0AA0046B2D3 /* storeViewController.h */,
 				842194651BB6A0AA0046B2D3 /* storeViewController.m */,
 				8421945E1BB69FD70046B2D3 /* HomewomenController.h */,

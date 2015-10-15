@@ -1237,12 +1237,16 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXr-QF-P7G">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXr-QF-P7G">
                                 <rect key="frame" x="148" y="72" width="80" height="80"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="DQJ-f6-Yfh"/>
                                     <constraint firstAttribute="height" constant="80" id="T4v-pb-Kmh"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fs0-za-bfj" appends="YES" id="YCP-Sr-Zub"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1267,9 +1271,6 @@
                                 <exclude reference="mpO-q3-nfB"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="YTk-hD-doR" appends="YES" id="sUg-xf-wo0"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Uy5-64-Rea">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Ece-aH-4JK">
@@ -1299,9 +1300,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ks-t3-F8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="YTk-hD-doR">
+                <tapGestureRecognizer id="fs0-za-bfj">
                     <connections>
-                        <action selector="chuping:" destination="9dw-eF-XgQ" id="iN2-Wc-xev"/>
+                        <action selector="chuping:" destination="9dw-eF-XgQ" id="Mkb-Jr-I1P"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
